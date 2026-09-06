@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pkprincee09.github.io/kushinara-connect/sitemap.xml
