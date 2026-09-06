@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Find a Stay | Kushinara Connect</title>
+<meta name="description" content="Find hotels, guest houses and comfortable stays in Kushinagar with Kushinara Connect.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#071a2b;
+  --navy2:#0c2940;
+  --gold:#c9a45c;
+  --gold-light:#e4cc98;
+  --cream:#f7f6f2;
+  --white:#fff;
+  --text:#14202b;
+  --muted:#687580;
+  --border:rgba(7,26,43,.11);
+  --shadow:0 18px 50px rgba(7,26,43,.10);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"DM Sans",sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+button,
+input,
+select{
+  font-family:inherit;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  background:var(--navy);
+  color:white;
+  position:relative;
+  z-index:100;
+}
+
+.navbar{
+  min-height:88px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-mark{
+  width:49px;
+  height:49px;
+  border:1.5px solid var(--gold);
+  border-radius:15px 15px 15px 5px;
+  position:relative;
+  background:rgba(255,255,255,.04);
+  flex-shrink:0;
+}
+
+.logo-mark:before{
+  content:"K";
+  position:absolute;
+  left:9px;
+  top:5px;
+  font-family:"Playfair Display",serif;
+  font-size:27px;
+  font-weight:700;
+  color:var(--gold-light);
+}
+
+.logo-mark:after{
+  content:"C";
+  position:absolute;
+  right:7px;
+  bottom:3px;
+  font-family:"Playfair Display",serif;
+  font-size:27px;
+  font-weight:700;
+  color:white;
+}
+
+.logo-title{
+  font-family:"Playfair Display",serif;
+  font-size:19px;
+  font-weight:700;
+  letter-spacing:1.3px;
+  line-height:1;
+}
+
+.logo-tagline{
+  color:var(--gold-light);
+  font-size:7px;
+  letter-spacing:2px;
+  margin-top:6px;
+  white-space:nowrap;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.nav-links a{
+  color:rgba(255,255,255,.85);
+  font-size:13px;
+  transition:.2s;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+  color:var(--gold-light);
+}
+
+.business-btn{
+  border:1px solid rgba(228,204,152,.65);
+  padding:9px 15px;
+  border-radius:50px;
+  color:var(--gold-light)!important;
+}
+
+.menu-btn{
+  display:none;
+  width:44px;
+  height:44px;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.06);
+  color:white;
+  border-radius:12px;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.mobile-menu{
+  display:none;
+  background:#061724;
+  padding:12px 4%;
+}
+
+.mobile-menu a{
+  display:block;
+  color:white;
+  padding:12px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* ================= HERO ================= */
+
+.page-hero{
+  min-height:430px;
+  display:flex;
+  align-items:center;
+  color:white;
+  position:relative;
+  background:
+    linear-gradient(90deg,rgba(4,17,29,.94),rgba(7,26,43,.67)),
+    url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=85")
+    center/cover no-repeat;
+}
+
+.page-hero-content{
+  max-width:700px;
+  padding:50px 0;
+}
+
+.eyebrow{
+  color:var(--gold-light);
+  text-transform:uppercase;
+  letter-spacing:2.5px;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:13px;
+}
+
+.page-hero h1{
+  font-family:"Playfair Display",serif;
+  font-size:clamp(43px,6vw,68px);
+  line-height:1.05;
+}
+
+.page-hero h1 span{
+  color:var(--gold-light);
+}
+
+.page-hero p{
+  max-width:610px;
+  color:rgba(255,255,255,.78);
+  font-size:15px;
+  margin-top:17px;
+}
+
+/* ================= SEARCH ================= */
+
+.search-wrap{
+  margin-top:-38px;
+  position:relative;
+  z-index:10;
+}
+
+.search-box{
+  background:white;
+  border-radius:20px;
+  box-shadow:var(--shadow);
+  padding:18px;
+  display:grid;
+  grid-template-columns:1.7fr 1fr 1fr auto;
+  gap:12px;
+  border:1px solid rgba(7,26,43,.06);
+}
+
+.input,
+.select{
+  width:100%;
+  height:52px;
+  border:1px solid var(--border);
+  border-radius:13px;
+  padding:0 15px;
+  outline:none;
+  background:white;
+  color:var(--text);
+  font-size:13px;
+}
+
+.input:focus,
+.select:focus{
+  border-color:var(--gold);
+}
+
+.search-btn{
+  height:52px;
+  padding:0 24px;
+  border:0;
+  border-radius:13px;
+  background:var(--navy);
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.search-btn:hover{
+  background:var(--navy2);
+}
+
+/* ================= CONTENT ================= */
+
+.hotels-section{
+  padding:90px 0;
+}
+
+.section-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:25px;
+  margin-bottom:35px;
+}
+
+.mini{
+  color:#a27d35;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+
+.section-top h2{
+  font-family:"Playfair Display",serif;
+  color:var(--navy);
+  font-size:40px;
+  line-height:1.1;
+}
+
+.section-top p{
+  color:var(--muted);
+  font-size:13px;
+  max-width:430px;
+}
+
+/* ================= HOTEL GRID ================= */
+
+.hotel-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.hotel-card{
+  background:white;
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid rgba(7,26,43,.07);
+  box-shadow:0 8px 30px rgba(7,26,43,.06);
+  transition:.3s;
+}
+
+.hotel-card:hover{
+  transform:translateY(-7px);
+  box-shadow:var(--shadow);
+}
+
+.hotel-image{
+  height:235px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hotel-image img{
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.hotel-card:hover .hotel-image img{
+  transform:scale(1.06);
+}
+
+.hotel-badge{
+  position:absolute;
+  left:14px;
+  top:14px;
+  background:rgba(7,26,43,.84);
+  color:white;
+  border-radius:50px;
+  padding:6px 11px;
+  font-size:10px;
+  font-weight:700;
+}
+
+.price-badge{
+  position:absolute;
+  right:14px;
+  bottom:14px;
+  background:white;
+  color:var(--navy);
+  border-radius:11px;
+  padding:8px 11px;
+  font-size:11px;
+  font-weight:700;
+}
+
+.hotel-info{
+  padding:21px;
+}
+
+.hotel-location{
+  color:#a27d35;
+  text-transform:uppercase;
+  font-size:10px;
+  letter-spacing:1px;
+  font-weight:800;
+}
+
+.hotel-info h3{
+  font-family:"Playfair Display",serif;
+  font-size:22px;
+  color:var(--navy);
+  margin-top:5px;
+}
+
+.hotel-info p{
+  color:var(--muted);
+  font-size:12px;
+  margin:7px 0 13px;
+}
+
+.rating{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  margin-bottom:14px;
+}
+
+.stars{
+  color:#b98d39;
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+.rating span{
+  color:var(--muted);
+  font-size:11px;
+}
+
+.amenities{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--border);
+}
+
+.amenity{
+  background:#f5f3ee;
+  color:#596570;
+  border-radius:50px;
+  padding:5px 8px;
+  font-size:9px;
+}
+
+.hotel-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-top:15px;
+}
+
+.price{
+  color:var(--navy);
+  font-weight:800;
+  font-size:14px;
+}
+
+.price small{
+  color:var(--muted);
+  font-size:9px;
+  font-weight:400;
+}
+
+.enquire{
+  background:var(--navy);
+  color:white;
+  border-radius:50px;
+  padding:8px 13px;
+  font-size:10px;
+  font-weight:700;
+}
+
+.enquire:hover{
+  background:var(--gold);
+  color:var(--navy);
+}
+
+/* ================= INFO ================= */
+
+.info-section{
+  background:white;
+  padding:85px 0;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.info-image{
+  height:400px;
+  border-radius:26px;
+  overflow:hidden;
+}
+
+.info-image img{
+  height:100%;
+  object-fit:cover;
+}
+
+.info-text h2{
+  font-family:"Playfair Display",serif;
+  color:var(--navy);
+  font-size:40px;
+  line-height:1.15;
+  margin-bottom:15px;
+}
+
+.info-text p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.info-list{
+  display:grid;
+  gap:12px;
+  margin-top:22px;
+}
+
+.info-list div{
+  display:flex;
+  gap:10px;
+  color:var(--navy);
+  font-size:13px;
+  font-weight:600;
+}
+
+.check{
+  color:#a27d35;
+}
+
+/* ================= CTA ================= */
+
+.cta-section{
+  padding:80px 0;
+}
+
+.cta{
+  background:var(--navy);
+  border-radius:27px;
+  padding:55px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:35px;
+  color:white;
+}
+
+.cta h2{
+  font-family:"Playfair Display",serif;
+  font-size:38px;
+  line-height:1.15;
+}
+
+.cta p{
+  color:rgba(255,255,255,.68);
+  max-width:590px;
+  margin-top:10px;
+  font-size:13px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:49px;
+  padding:0 22px;
+  border-radius:50px;
+  font-size:13px;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+.btn-gold{
+  background:var(--gold);
+  color:var(--navy);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:var(--navy);
+  color:white;
+  padding:60px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:40px;
+  padding-bottom:42px;
+}
+
+.footer-brand p{
+  color:rgba(255,255,255,.6);
+  font-size:12.5px;
+  max-width:310px;
+  margin-top:17px;
+}
+
+.footer-col h4{
+  color:var(--gold-light);
+  font-size:13px;
+  margin-bottom:15px;
+}
+
+.footer-col a{
+  display:block;
+  color:rgba(255,255,255,.65);
+  font-size:12px;
+  margin:9px 0;
+}
+
+.footer-col a:hover{
+  color:white;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:21px;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  color:rgba(255,255,255,.45);
+  font-size:10.5px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1050px){
+
+  .nav-links{
+    gap:15px;
+  }
+
+  .search-box{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .search-input-wrap{
+    grid-column:1/-1;
+  }
+
+  .hotel-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .info-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:800px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .search-box{
+    grid-template-columns:1fr;
+  }
+
+  .search-input-wrap{
+    grid-column:auto;
+  }
+
+  .section-top{
+    display:block;
+  }
+
+  .section-top p{
+    margin-top:10px;
+  }
+
+  .cta{
+    display:block;
+  }
+
+  .cta .btn{
+    margin-top:22px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1.4fr 1fr 1fr;
+  }
+}
+
+@media(max-width:650px){
+
+  .navbar{
+    min-height:76px;
+  }
+
+  .logo-mark{
+    width:43px;
+    height:43px;
+  }
+
+  .logo-title{
+    font-size:15px;
+  }
+
+  .logo-tagline{
+    font-size:6px;
+  }
+
+  .page-hero{
+    min-height:390px;
+  }
+
+  .page-hero h1{
+    font-size:43px;
+  }
+
+  .page-hero p{
+    font-size:13px;
+  }
+
+  .search-wrap{
+    margin-top:-28px;
+  }
+
+  .search-box{
+    padding:12px;
+  }
+
+  .hotels-section{
+    padding:70px 0;
+  }
+
+  .section-top h2{
+    font-size:32px;
+  }
+
+  .hotel-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hotel-image{
+    height:230px;
+  }
+
+  .info-image{
+    height:300px;
+  }
+
+  .info-text h2{
+    font-size:32px;
+  }
+
+  .cta{
+    padding:35px 23px;
+  }
+
+  .cta h2{
+    font-size:31px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    gap:30px 20px;
+  }
+
+  .footer-brand{
+    grid-column:1/-1;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+@media(max-width:390px){
+
+  .logo-tagline{
+    display:none;
+  }
+
+  .page-hero h1{
+    font-size:39px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+  <div class="container">
+
+    <nav class="navbar">
+
+      <a href="index.html" class="logo">
+
+        <div class="logo-mark"></div>
+
+        <div>
+          <div class="logo-title">KUSHINARA CONNECT</div>
+          <div class="logo-tagline">
+            DISCOVER • CONNECT • EXPERIENCE
+          </div>
+        </div>
+
+      </a>
+
+      <div class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="places.html">Places</a>
+
+        <a href="hotels.html" class="active">Stay</a>
+
+        <a href="cabs.html">Cabs</a>
+
+        <a href="packages.html">Packages</a>
+
+        <a href="businesses.html">Businesses</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="businesses.html" class="business-btn">
+          List Your Business
+        </a>
+
+      </div>
+
+      <button class="menu-btn" id="menuBtn">
+        ☰
+      </button>
+
+    </nav>
+
+  </div>
+
+
+  <div class="mobile-menu" id="mobileMenu">
+
+    <a href="index.html">Home</a>
+    <a href="places.html">Explore Places</a>
+    <a href="hotels.html">Find a Stay</a>
+    <a href="cabs.html">Book a Cab</a>
+    <a href="packages.html">Tour Packages</a>
+    <a href="restaurants.html">Restaurants</a>
+    <a href="businesses.html">Local Businesses</a>
+    <a href="blog.html">Travel Guide</a>
+    <a href="contact.html">Contact</a>
+
+  </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="page-hero">
+
+  <div class="container">
+
+    <div class="page-hero-content">
+
+      <div class="eyebrow">
+        Find Your Stay
+      </div>
+
+      <h1>
+        Stay comfortable.<br>
+        <span>Experience more.</span>
+      </h1>
+
+      <p>
+        Discover hotels, guest houses and comfortable
+        accommodation options for your Kushinagar journey.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SEARCH ================= -->
+
+<div class="search-wrap">
+
+  <div class="container">
+
+    <div class="search-box">
+
+      <input
+        id="searchInput"
+        class="input search-input-wrap"
+        type="text"
+        placeholder="Search hotel or location..."
+      >
+
+      <select id="priceFilter" class="select">
+
+        <option value="all">
+          Any Price
+        </option>
+
+        <option value="budget">
+          Under ₹1,500
+        </option>
+
+        <option value="mid">
+          ₹1,500 – ₹3,000
+        </option>
+
+        <option value="premium">
+          ₹3,000+
+        </option>
+
+      </select>
+
+      <select id="typeFilter" class="select">
+
+        <option value="all">
+          All Stay Types
+        </option>
+
+        <option value="hotel">
+          Hotel
+        </option>
+
+        <option value="guesthouse">
+          Guest House
+        </option>
+
+        <option value="resort">
+          Resort
+        </option>
+
+      </select>
+
+      <button class="search-btn" id="searchBtn">
+        Search
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ================= HOTELS ================= -->
+
+<section class="hotels-section">
+
+  <div class="container">
+
+    <div class="section-top">
+
+      <div>
+
+        <div class="mini">
+          Accommodation
+        </div>
+
+        <h2>
+          Find a stay in Kushinara
+        </h2>
+
+      </div>
+
+      <p>
+        Choose from comfortable hotels and accommodation
+        options for pilgrims, tourists and families.
+      </p>
+
+    </div>
+
+
+    <div class="hotel-grid" id="hotelGrid">
+
+
+      <!-- HOTEL 1 -->
+
+      <article
+        class="hotel-card"
+        data-name="Kushinara Grand Hotel"
+        data-type="hotel"
+        data-price="mid"
+      >
+
+        <div class="hotel-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85"
+            alt="Hotel room and building"
+          >
+
+          <span class="hotel-badge">
+            Popular
+          </span>
+
+          <span class="price-badge">
+            ₹2,400/night
+          </span>
+
+        </div>
+
+        <div class="hotel-info">
+
+          <div class="hotel-location">
+            Near Mahaparinirvana Temple
+          </div>
+
+          <h3>
+            Kushinara Grand Hotel
+          </h3>
+
+          <p>
+            Comfortable rooms with convenient access
+            to major pilgrimage attractions.
+          </p>
+
+          <div class="rating">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <span>
+              4.6 · Guest Rating
+            </span>
+
+          </div>
+
+          <div class="amenities">
+
+            <span class="amenity">Wi-Fi</span>
+            <span class="amenity">AC</span>
+            <span class="amenity">Parking</span>
+            <span class="amenity">Restaurant</span>
+
+          </div>
+
+          <div class="hotel-footer">
+
+            <div class="price">
+              ₹2,400
+              <small>/ night</small>
+            </div>
+
+            <a
+              href="https://wa.me/919999999999?text=Hello%20Kushinara%20Connect%2C%20I%20want%20to%20enquire%20about%20Kushinara%20Grand%20Hotel."
+              target="_blank"
+              class="enquire"
+            >
+              ENQUIRE
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- HOTEL 2 -->
+
+      <article
+        class="hotel-card"
+        data-name="Buddha Guest House"
+        data-type="guesthouse"
+        data-price="budget"
+      >
+
+        <div class="hotel-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1000&q=85"
+            alt="Guest house"
+          >
+
+          <span class="hotel-badge">
+            Budget
+          </span>
+
+          <span class="price-badge">
+            ₹1,200/night
+          </span>
+
+        </div>
+
+        <div class="hotel-info">
+
+          <div class="hotel-location">
+            Kushinagar
+          </div>
+
+          <h3>
+            Buddha Guest House
+          </h3>
+
+          <p>
+            Simple and peaceful accommodation for
+            pilgrims and budget travellers.
+          </p>
+
+          <div class="rating">
+
+            <div class="stars">
+              ★★★★☆
+            </div>
+
+            <span>
+              4.2 · Guest Rating
+            </span>
+
+          </div>
+
+          <div class="amenities">
+
+            <span class="amenity">Wi-Fi</span>
+            <span class="amenity">AC</span>
+            <span class="amenity">Parking</span>
+
+          </div>
+
+          <div class="hotel-footer">
+
+            <div class="price">
+              ₹1,200
+              <small>/ night</small>
+            </div>
+
+            <a
+              href="https://wa.me/919999999999?text=Hello%20Kushinara%20Connect%2C%20I%20want%20to%20enquire%20about%20Buddha%20Guest%20House."
+              target="_blank"
+              class="enquire"
+            >
+              ENQUIRE
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- HOTEL 3 -->
+
+      <article
+        class="hotel-card"
+        data-name="Kushinara Heritage Resort"
+        data-type="resort"
+        data-price="premium"
+      >
+
+        <div class="hotel-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=85"
+            alt="Luxury resort"
+          >
+
+          <span class="hotel-badge">
+            Premium
+          </span>
+
+          <span class="price-badge">
+            ₹4,500/night
+          </span>
+
+        </div>
+
+        <div class="hotel-info">
+
+          <div class="hotel-location">
+            Kushinagar
+          </div>
+
+          <h3>
+            Kushinara Heritage Resort
+          </h3>
+
+          <p>
+            Premium rooms, peaceful surroundings and
+            modern facilities for a relaxing stay.
+          </p>
+
+          <div class="rating">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <span>
+              4.8 · Guest Rating
+            </span>
+
+          </div>
+
+          <div class="amenities">
+
+            <span class="amenity">Wi-Fi</span>
+            <span class="amenity">AC</span>
+            <span class="amenity">Pool</span>
+            <span class="amenity">Restaurant</span>
+
+          </div>
+
+          <div class="hotel-footer">
+
+            <div class="price">
+              ₹4,500
+              <small>/ night</small>
+            </div>
+
+            <a
+              href="https://wa.me/919999999999?text=Hello%20Kushinara%20Connect%2C%20I%20want%20to%20enquire%20about%20Kushinara%20Heritage%20Resort."
+              target="_blank"
+              class="enquire"
+            >
+              ENQUIRE
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- HOTEL 4 -->
+
+      <article
+        class="hotel-card"
+        data-name="Maya Residency"
+        data-type="hotel"
+        data-price="mid"
+      >
+
+        <div class="hotel-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1000&q=85"
+            alt="Hotel"
+          >
+
+          <span class="hotel-badge">
+            Family Stay
+          </span>
+
+          <span class="price-badge">
+            ₹2,100/night
+          </span>
+
+        </div>
+
+        <div class="hotel-info">
+
+          <div class="hotel-location">
+            Kushinagar
+          </div>
+
+          <h3>
+            Maya Residency
+          </h3>
+
+          <p>
+            Family-friendly rooms with convenient
+            facilities for short and long stays.
+          </p>
+
+          <div class="rating">
+
+            <div class="stars">
+              ★★★★☆
+            </div>
+
+            <span>
+              4.4 · Guest Rating
+            </span>
+
+          </div>
+
+          <div class="amenities">
+
+            <span class="amenity">Wi-Fi</span>
+            <span class="amenity">AC</span>
+            <span class="amenity">Parking</span>
+
+          </div>
+
+          <div class="hotel-footer">
+
+            <div class="price">
+              ₹2,100
+              <small>/ night</small>
+            </div>
+
+            <a
+              href="https://wa.me/919999999999?text=Hello%20Kushinara%20Connect%2C%20I%20want%20to%20enquire%20about%20Maya%20Residency."
+              target="_blank"
+              class="enquire"
+            >
+              ENQUIRE
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- HOTEL 5 -->
+
+      <article
+        class="hotel-card"
+        data-name="Peaceful Stay Inn"
+        data-type="guesthouse"
+        data-price="budget"
+      >
+
+        <div class="hotel-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=85"
+            alt="Peaceful hotel room"
+          >
+
+          <span class="hotel-badge">
+            Value
+          </span>
+
+          <span class="price-badge">
+            ₹1,450/night
+          </span>
+
+        </div>
+
+        <div class="hotel-info">
+
+          <div class="hotel-location">
+            Near Kushinagar Centre
+          </div>
+
+          <h3>
+            Peaceful Stay Inn
+          </h3>
+
+          <p>
+            Affordable rooms in a convenient location
+            for visitors exploring Kushinagar.
+          </p>
+
+          <div class="rating">
+
+            <div class="stars">
+              ★★★★☆
+            </div>
+
+            <span>
+              4.1 · Guest Rating
+            </span>
+
+          </div>
+
+          <div class="amenities">
+
+            <span class="amenity">Wi-Fi</span>
+            <span class="amenity">AC</span>
+            <span class="amenity">Parking</span>
+
+          </div>
+
+          <div class="hotel-footer">
+
+            <div class="price">
+              ₹1,450
+              <small>/ night</small>
+            </div>
+
+            <a
+              href="https://wa.me/919999999999?text=Hello%20Kushinara%20Connect%2C%20I%20want%20to%20enquire%20about%20Peaceful%20Stay%20Inn."
+              target="_blank"
+              class="enquire"
+            >
+              ENQUIRE
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- HOTEL 6 -->
+
+      <article
+        class="hotel-card"
+        data-name="Lotus Grand Resort"
+        data-type="resort"
+        data-price="premium"
+      >
+
+        <div class="hotel-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1000&q=85"
+            alt="Resort"
+          >
+
+          <span class="hotel-badge">
+            Luxury
+          </span>
+
+          <span class="price-badge">
+            ₹3,800/night
+          </span>
+
+        </div>
+
+        <div class="hotel-info">
+
+          <div class="hotel-location">
+            Kushinagar
+          </div>
+
+          <h3>
+            Lotus Grand Resort
+          </h3>
+
+          <p>
+            A premium stay experience with spacious
+            rooms and modern amenities.
+          </p>
+
+          <div class="rating">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <span>
+              4.7 · Guest Rating
+            </span>
+
+          </div>
+
+          <div class="amenities">
+
+            <span class="amenity">Wi-Fi</span>
+            <span class="amenity">AC</span>
+            <span class="amenity">Pool</span>
+            <span class="amenity">Restaurant</span>
+
+          </div>
+
+          <div class="hotel-footer">
+
+            <div class="price">
+              ₹3,800
+              <small>/ night</small>
+            </div>
+
+            <a
+              href="https://wa.me/919999999999?text=Hello%20Kushinara%20Connect%2C%20I%20want%20to%20enquire%20about%20Lotus%20Grand%20Resort."
+              target="_blank"
+              class="enquire"
+            >
+              ENQUIRE
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= INFO ================= -->
+
+<section class="info-section">
+
+  <div class="container">
+
+    <div class="info-grid">
+
+      <div class="info-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=85"
+          alt="Comfortable accommodation"
+        >
+
+      </div>
+
+
+      <div class="info-text">
+
+        <div class="mini">
+          Stay With Ease
+        </div>
+
+        <h2>
+          Choose a stay that fits your journey.
+        </h2>
+
+        <p>
+          Whether you are visiting Kushinagar for pilgrimage,
+          tourism or a family trip, find accommodation that
+          matches your needs and budget.
+        </p>
+
+
+        <div class="info-list">
+
+          <div>
+            <span class="check">✓</span>
+            Budget-friendly accommodation
+          </div>
+
+          <div>
+            <span class="check">✓</span>
+            Family-friendly stays
+          </div>
+
+          <div>
+            <span class="check">✓</span>
+            Premium hotels and resorts
+          </div>
+
+          <div>
+            <span class="check">✓</span>
+            Convenient locations near attractions
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta-section">
+
+  <div class="container">
+
+    <div class="cta">
+
+      <div>
+
+        <h2>
+          Looking for more<br>
+          in Kushinara?
+        </h2>
+
+        <p>
+          Explore tourist places, book a local cab or discover
+          tour packages for your Kushinagar journey.
+        </p>
+
+      </div>
+
+      <a href="places.html" class="btn btn-gold">
+        Explore Places →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="logo">
+
+          <div class="logo-mark"></div>
+
+          <div>
+
+            <div class="logo-title">
+              KUSHINARA CONNECT
+            </div>
+
+            <div class="logo-tagline">
+              DISCOVER • CONNECT • EXPERIENCE
+            </div>
+
+          </div>
+
+        </a>
+
+        <p>
+          Discover Kushinara. Connect with local businesses.
+          Experience Kushinagar better.
+        </p>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>Explore</h4>
+
+        <a href="places.html">Places</a>
+        <a href="packages.html">Tour Packages</a>
+        <a href="hotels.html">Find a Stay</a>
+        <a href="cabs.html">Book a Cab</a>
+        <a href="restaurants.html">Restaurants</a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>Business</h4>
+
+        <a href="businesses.html">
+          Local Businesses
+        </a>
+
+        <a href="businesses.html">
+          List Your Business
+        </a>
+
+        <a href="businesses.html">
+          Business Directory
+        </a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>Company</h4>
+
+        <a href="index.html">Home</a>
+        <a href="blog.html">Travel Guide</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div>
+        © 2026 Kushinara Connect. All rights reserved.
+      </div>
+
+      <div>
+        Kushinagar, Uttar Pradesh, India
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+const menuBtn =
+  document.getElementById("menuBtn");
+
+const mobileMenu =
+  document.getElementById("mobileMenu");
+
+
+menuBtn.addEventListener("click", function(){
+
+  if(mobileMenu.style.display === "block"){
+
+    mobileMenu.style.display = "none";
+    menuBtn.innerHTML = "☰";
+
+  }else{
+
+    mobileMenu.style.display = "block";
+    menuBtn.innerHTML = "✕";
+
+  }
+
+});
+
+
+/* ================= HOTEL SEARCH ================= */
+
+const searchInput =
+  document.getElementById("searchInput");
+
+const priceFilter =
+  document.getElementById("priceFilter");
+
+const typeFilter =
+  document.getElementById("typeFilter");
+
+const searchBtn =
+  document.getElementById("searchBtn");
+
+const hotels =
+  document.querySelectorAll(".hotel-card");
+
+
+function filterHotels(){
+
+  const search =
+    searchInput.value.toLowerCase().trim();
+
+  const price =
+    priceFilter.value;
+
+  const type =
+    typeFilter.value;
+
+
+  hotels.forEach(function(hotel){
+
+    const name =
+      hotel.dataset.name.toLowerCase();
+
+    const hotelType =
+      hotel.dataset.type;
+
+    const hotelPrice =
+      hotel.dataset.price;
+
+
+    const searchMatch =
+      name.includes(search);
+
+    const priceMatch =
+      price === "all" ||
+      hotelPrice === price;
+
+    const typeMatch =
+      type === "all" ||
+      hotelType === type;
+
+
+    if(
+      searchMatch &&
+      priceMatch &&
+      typeMatch
+    ){
+
+      hotel.style.display = "";
+
+    }else{
+
+      hotel.style.display = "none";
+
+    }
+
+  });
+
+}
+
+
+searchInput.addEventListener(
+  "input",
+  filterHotels
+);
+
+priceFilter.addEventListener(
+  "change",
+  filterHotels
+);
+
+typeFilter.addEventListener(
+  "change",
+  filterHotels
+);
+
+searchBtn.addEventListener(
+  "click",
+  filterHotels
+);
+
+</script>
+
+</body>
+</html>
