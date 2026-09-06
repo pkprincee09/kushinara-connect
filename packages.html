@@ -1,0 +1,2295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071a2b">
+
+<title>Tour Packages | KUSHINARA CONNECT</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --navy:#071a2b;
+  --navy2:#0c2940;
+  --gold:#c9a45c;
+  --gold-light:#e4cc98;
+  --cream:#f7f6f2;
+  --white:#fff;
+  --text:#14202b;
+  --muted:#687580;
+  --border:rgba(7,26,43,.11);
+  --shadow:0 18px 50px rgba(7,26,43,.10);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"DM Sans",sans-serif;
+  color:var(--text);
+  background:var(--cream);
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button,
+input,
+select{
+  font:inherit;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,26,43,.97);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar{
+  max-width:1200px;
+  height:78px;
+  margin:auto;
+  padding:0 22px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* LOGO */
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-mark{
+  width:49px;
+  height:49px;
+
+  border:1.5px solid var(--gold);
+  border-radius:15px 15px 15px 5px;
+
+  position:relative;
+  background:rgba(255,255,255,.04);
+  flex-shrink:0;
+}
+
+.logo-mark:before{
+  content:"K";
+
+  position:absolute;
+  left:9px;
+  top:5px;
+
+  font-family:"Playfair Display",serif;
+  font-size:27px;
+  font-weight:700;
+
+  color:var(--gold-light);
+}
+
+.logo-mark:after{
+  content:"C";
+
+  position:absolute;
+  right:7px;
+  bottom:3px;
+
+  font-family:"Playfair Display",serif;
+  font-size:27px;
+  font-weight:700;
+
+  color:white;
+}
+
+.logo-title{
+  color:white;
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:1.3px;
+}
+
+.logo-tagline{
+  color:var(--gold-light);
+  font-size:8px;
+  letter-spacing:2px;
+}
+
+/* NAVIGATION */
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+
+.nav-links a{
+  color:rgba(255,255,255,.78);
+  font-size:14px;
+  font-weight:500;
+
+  transition:.25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+  color:var(--gold-light);
+}
+
+.nav-btn{
+  border:1px solid var(--gold);
+  padding:9px 16px;
+  border-radius:9px;
+  color:var(--gold-light)!important;
+}
+
+.menu-btn{
+  display:none;
+
+  border:0;
+  background:none;
+
+  color:white;
+  font-size:27px;
+
+  cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  background:
+    linear-gradient(
+      115deg,
+      rgba(7,26,43,.98),
+      rgba(7,26,43,.88)
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(201,164,92,.25),
+      transparent 35%
+    );
+
+  color:white;
+
+  padding:78px 22px 100px;
+}
+
+.hero-inner{
+  max-width:1100px;
+  margin:auto;
+  text-align:center;
+}
+
+.eyebrow{
+  color:var(--gold-light);
+
+  text-transform:uppercase;
+  letter-spacing:3px;
+
+  font-size:12px;
+  font-weight:700;
+
+  margin-bottom:15px;
+}
+
+.hero h1{
+  font-family:"Playfair Display",serif;
+
+  font-size:clamp(40px,6vw,66px);
+
+  line-height:1.08;
+
+  max-width:850px;
+
+  margin:0 auto 18px;
+}
+
+.hero h1 span{
+  color:var(--gold-light);
+}
+
+.hero p{
+  max-width:680px;
+
+  margin:auto;
+
+  color:rgba(255,255,255,.72);
+
+  font-size:16px;
+}
+
+/* ================= FILTER ================= */
+
+.filter-wrap{
+  max-width:1100px;
+
+  margin:-42px auto 0;
+
+  padding:0 20px;
+
+  position:relative;
+  z-index:5;
+}
+
+.filter-box{
+  background:white;
+
+  padding:20px;
+
+  border-radius:18px;
+
+  box-shadow:0 25px 65px rgba(7,26,43,.18);
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr 1fr auto;
+
+  gap:12px;
+}
+
+.filter-box select,
+.filter-box input{
+  height:48px;
+
+  border:1px solid var(--border);
+
+  border-radius:10px;
+
+  padding:0 13px;
+
+  outline:none;
+
+  background:white;
+
+  color:var(--text);
+}
+
+.filter-box select:focus,
+.filter-box input:focus{
+  border-color:var(--gold);
+}
+
+.filter-btn{
+  height:48px;
+
+  border:0;
+
+  border-radius:10px;
+
+  padding:0 22px;
+
+  background:var(--navy);
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+.filter-btn:hover{
+  background:var(--navy2);
+}
+
+/* ================= SECTION ================= */
+
+.section{
+  max-width:1200px;
+
+  margin:auto;
+
+  padding:75px 22px;
+}
+
+.section-head{
+  display:flex;
+
+  align-items:end;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  margin-bottom:30px;
+}
+
+.section-head h2{
+  font-family:"Playfair Display",serif;
+
+  color:var(--navy);
+
+  font-size:34px;
+}
+
+.section-head p{
+  max-width:500px;
+
+  color:var(--muted);
+
+  font-size:14px;
+}
+
+/* ================= PACKAGE GRID ================= */
+
+.package-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:22px;
+}
+
+.package-card{
+  background:white;
+
+  border:1px solid var(--border);
+
+  border-radius:18px;
+
+  overflow:hidden;
+
+  box-shadow:0 8px 30px rgba(7,26,43,.06);
+
+  transition:.3s;
+}
+
+.package-card:hover{
+  transform:translateY(-6px);
+
+  box-shadow:var(--shadow);
+}
+
+.package-image{
+  height:205px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy),
+      var(--navy2)
+    );
+}
+
+.package-image::before{
+  content:"";
+
+  position:absolute;
+
+  width:180px;
+  height:180px;
+
+  border:1px solid
+    rgba(201,164,92,.25);
+
+  border-radius:50%;
+}
+
+.package-icon{
+  font-size:75px;
+
+  position:relative;
+
+  filter:
+    drop-shadow(
+      0 10px 15px
+      rgba(0,0,0,.25)
+    );
+}
+
+.package-badge{
+  position:absolute;
+
+  top:13px;
+  left:13px;
+
+  background:var(--gold);
+
+  color:var(--navy);
+
+  padding:5px 9px;
+
+  border-radius:6px;
+
+  font-size:10px;
+
+  font-weight:800;
+
+  text-transform:uppercase;
+
+  letter-spacing:.6px;
+}
+
+.package-body{
+  padding:21px;
+}
+
+.package-body h3{
+  font-size:20px;
+
+  margin-bottom:4px;
+
+  color:var(--navy);
+}
+
+.package-sub{
+  color:var(--muted);
+
+  font-size:13px;
+
+  margin-bottom:15px;
+}
+
+.package-meta{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:7px;
+
+  margin-bottom:17px;
+}
+
+.meta{
+  background:#f5f6f7;
+
+  color:#596670;
+
+  font-size:11px;
+
+  padding:6px 8px;
+
+  border-radius:6px;
+}
+
+.package-details{
+  border-top:1px solid var(--border);
+
+  padding-top:15px;
+
+  margin-top:5px;
+
+  margin-bottom:17px;
+}
+
+.package-details div{
+  display:flex;
+
+  gap:8px;
+
+  color:var(--muted);
+
+  font-size:12px;
+
+  margin-bottom:6px;
+}
+
+.package-price{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:end;
+
+  margin-bottom:16px;
+}
+
+.package-price small{
+  color:var(--muted);
+
+  font-size:11px;
+}
+
+.package-price strong{
+  color:var(--navy);
+
+  font-size:23px;
+}
+
+.book-btn{
+  display:block;
+
+  text-align:center;
+
+  background:var(--navy);
+
+  color:white;
+
+  padding:11px;
+
+  border-radius:9px;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  transition:.25s;
+}
+
+.book-btn:hover{
+  background:var(--navy2);
+}
+
+.no-results{
+  display:none;
+
+  grid-column:1/-1;
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:15px;
+
+  text-align:center;
+
+  color:var(--muted);
+}
+
+/* ================= ITINERARY ================= */
+
+.itinerary-section{
+  background:white;
+
+  border-top:1px solid var(--border);
+
+  border-bottom:1px solid var(--border);
+}
+
+.itinerary{
+  max-width:1200px;
+
+  margin:auto;
+
+  padding:70px 22px;
+}
+
+.itinerary-head{
+  text-align:center;
+
+  max-width:650px;
+
+  margin:0 auto 45px;
+}
+
+.itinerary-head h2{
+  font-family:"Playfair Display",serif;
+
+  color:var(--navy);
+
+  font-size:34px;
+
+  margin-bottom:8px;
+}
+
+.itinerary-head p{
+  color:var(--muted);
+
+  font-size:14px;
+}
+
+.steps{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:20px;
+}
+
+.step{
+  position:relative;
+
+  padding:25px;
+
+  border:1px solid var(--border);
+
+  border-radius:16px;
+
+  background:var(--cream);
+}
+
+.step-number{
+  width:38px;
+  height:38px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:var(--navy);
+
+  color:var(--gold-light);
+
+  font-weight:700;
+
+  margin-bottom:14px;
+}
+
+.step h3{
+  color:var(--navy);
+
+  font-size:17px;
+
+  margin-bottom:6px;
+}
+
+.step p{
+  color:var(--muted);
+
+  font-size:12px;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+  max-width:1200px;
+
+  margin:70px auto;
+
+  padding:55px 25px;
+
+  border-radius:24px;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(201,164,92,.18),
+      transparent 35%
+    ),
+    var(--navy);
+
+  text-align:center;
+
+  color:white;
+}
+
+.cta h2{
+  font-family:"Playfair Display",serif;
+
+  font-size:36px;
+
+  margin-bottom:10px;
+}
+
+.cta p{
+  max-width:580px;
+
+  margin:0 auto 24px;
+
+  color:rgba(255,255,255,.7);
+}
+
+.cta-btn{
+  display:inline-block;
+
+  background:var(--gold);
+
+  color:var(--navy);
+
+  font-weight:800;
+
+  padding:12px 20px;
+
+  border-radius:9px;
+
+  font-size:14px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#04111d;
+
+  color:white;
+
+  padding:55px 22px 25px;
+}
+
+.footer-grid{
+  max-width:1200px;
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:
+    1.5fr 1fr 1fr 1fr;
+
+  gap:40px;
+}
+
+.footer-brand p{
+  max-width:310px;
+
+  margin-top:16px;
+
+  color:rgba(255,255,255,.58);
+
+  font-size:13px;
+}
+
+.footer-title{
+  color:var(--gold-light);
+
+  font-size:13px;
+
+  font-weight:700;
+
+  margin-bottom:15px;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
+}
+
+.footer-links{
+  display:flex;
+
+  flex-direction:column;
+
+  gap:9px;
+}
+
+.footer-links a{
+  color:rgba(255,255,255,.6);
+
+  font-size:13px;
+}
+
+.footer-links a:hover{
+  color:white;
+}
+
+.footer-bottom{
+  max-width:1200px;
+
+  margin:40px auto 0;
+
+  padding-top:20px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.08);
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:15px;
+
+  color:rgba(255,255,255,.4);
+
+  font-size:11px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1050px){
+
+  .package-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .filter-box{
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .steps{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .footer-grid{
+    grid-template-columns:
+      1.5fr 1fr 1fr;
+  }
+
+}
+
+@media(max-width:760px){
+
+  .navbar{
+    height:70px;
+  }
+
+  .logo-mark{
+    width:43px;
+    height:43px;
+  }
+
+  .logo-mark:before,
+  .logo-mark:after{
+    font-size:24px;
+  }
+
+  .logo-title{
+    font-size:12px;
+  }
+
+  .logo-tagline{
+    font-size:6.5px;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav-links{
+    display:none;
+
+    position:absolute;
+
+    top:70px;
+
+    left:0;
+    right:0;
+
+    background:var(--navy);
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+    padding:15px 22px 22px;
+
+    gap:0;
+
+    border-top:
+      1px solid
+      rgba(255,255,255,.08);
+  }
+
+  .nav-links.show{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:13px 5px;
+
+    border-bottom:
+      1px solid
+      rgba(255,255,255,.07);
+  }
+
+  .nav-btn{
+    margin-top:8px;
+
+    text-align:center;
+  }
+
+  .hero{
+    padding:60px 20px 80px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .filter-wrap{
+    margin-top:-35px;
+
+    padding:0 15px;
+  }
+
+  .filter-box{
+    grid-template-columns:1fr;
+
+    padding:18px;
+  }
+
+  .filter-btn{
+    width:100%;
+  }
+
+  .section{
+    padding:55px 18px;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .section-head h2{
+    font-size:29px;
+
+    margin-bottom:7px;
+  }
+
+  .package-grid{
+    grid-template-columns:1fr;
+  }
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .itinerary{
+    padding:55px 18px;
+  }
+
+  .itinerary-head h2{
+    font-size:29px;
+  }
+
+  .cta{
+    margin:45px 15px;
+
+    padding:45px 20px;
+  }
+
+  .cta h2{
+    font-size:30px;
+  }
+
+  .footer-grid{
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:30px;
+  }
+
+  .footer-brand{
+    grid-column:1/-1;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+  }
+
+}
+
+@media(max-width:430px){
+
+  .logo-title{
+    font-size:11px;
+
+    letter-spacing:.8px;
+  }
+
+  .logo-tagline{
+    letter-spacing:1.2px;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-brand{
+    grid-column:auto;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+
+  <div class="logo-mark"></div>
+
+  <div>
+
+    <div class="logo-title">
+      KUSHINARA CONNECT
+    </div>
+
+    <div class="logo-tagline">
+      DISCOVER • CONNECT • EXPERIENCE
+    </div>
+
+  </div>
+
+</a>
+
+
+<button
+  class="menu-btn"
+  id="menuBtn"
+>
+  ☰
+</button>
+
+
+<div
+  class="nav-links"
+  id="navLinks"
+>
+
+  <a href="index.html">
+    Home
+  </a>
+
+  <a href="places.html">
+    Places
+  </a>
+
+  <a href="hotels.html">
+    Stay
+  </a>
+
+  <a href="cabs.html">
+    Cabs
+  </a>
+
+  <a
+    href="packages.html"
+    class="active"
+  >
+    Packages
+  </a>
+
+  <a href="restaurants.html">
+    Food
+  </a>
+
+  <a href="businesses.html">
+    Businesses
+  </a>
+
+  <a
+    href="contact.html"
+    class="nav-btn"
+  >
+    Contact
+  </a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-inner">
+
+  <div class="eyebrow">
+    CURATED EXPERIENCES • KUSHINAGAR
+  </div>
+
+  <h1>
+    Explore more with a
+    <span>planned journey.</span>
+  </h1>
+
+  <p>
+    Discover meaningful places, Buddhist heritage,
+    peaceful monasteries and local experiences
+    through simple Kushinagar tour packages.
+  </p>
+
+</div>
+
+</section>
+
+
+<!-- ================= FILTER ================= -->
+
+<div class="filter-wrap">
+
+<div class="filter-box">
+
+  <input
+    type="text"
+    id="search"
+    placeholder="Search package..."
+  >
+
+  <select id="duration">
+
+    <option value="all">
+      Any Duration
+    </option>
+
+    <option value="1">
+      1 Day
+    </option>
+
+    <option value="2">
+      2 Days
+    </option>
+
+    <option value="3">
+      3 Days+
+    </option>
+
+  </select>
+
+
+  <select id="category">
+
+    <option value="all">
+      All Categories
+    </option>
+
+    <option value="buddhist">
+      Buddhist
+    </option>
+
+    <option value="family">
+      Family
+    </option>
+
+    <option value="heritage">
+      Heritage
+    </option>
+
+    <option value="group">
+      Group Tour
+    </option>
+
+  </select>
+
+
+  <button
+    class="filter-btn"
+    onclick="filterPackages()"
+  >
+    Search Packages
+  </button>
+
+</div>
+
+</div>
+
+
+<!-- ================= PACKAGES ================= -->
+
+<section class="section">
+
+<div class="section-head">
+
+  <div>
+
+    <div
+      class="eyebrow"
+      style="color:var(--gold);"
+    >
+      OUR PACKAGES
+    </div>
+
+    <h2>
+      Popular Kushinagar Tours
+    </h2>
+
+  </div>
+
+  <p>
+    Flexible packages designed for pilgrims,
+    tourists, families and groups.
+  </p>
+
+</div>
+
+
+<div
+  class="package-grid"
+  id="packageGrid"
+>
+
+
+<!-- PACKAGE 1 -->
+
+<article
+  class="package-card"
+  data-duration="1"
+  data-category="buddhist"
+  data-search="kushinagar buddhist temple one day"
+>
+
+<div class="package-image">
+
+  <div class="package-badge">
+    Popular
+  </div>
+
+  <div class="package-icon">
+    🛕
+  </div>
+
+</div>
+
+
+<div class="package-body">
+
+  <h3>
+    Kushinagar One Day Tour
+  </h3>
+
+  <div class="package-sub">
+    A peaceful Buddhist heritage experience
+  </div>
+
+
+  <div class="package-meta">
+
+    <span class="meta">
+      ⏱ 1 Day
+    </span>
+
+    <span class="meta">
+      👥 Private
+    </span>
+
+    <span class="meta">
+      🛕 Buddhist
+    </span>
+
+  </div>
+
+
+  <div class="package-details">
+
+    <div>
+      📍 Mahaparinirvana Temple
+    </div>
+
+    <div>
+      📍 Ramabhar Stupa
+    </div>
+
+    <div>
+      📍 Buddha Museum
+    </div>
+
+  </div>
+
+
+  <div class="package-price">
+
+    <div>
+
+      <small>
+        Starting from
+      </small>
+
+      <br>
+
+      <strong>
+        ₹999
+      </strong>
+
+    </div>
+
+    <small>
+      per person*
+    </small>
+
+  </div>
+
+
+  <a
+    class="book-btn"
+    href="https://wa.me/919999999999?text=Hello%20KUSHINARA%20CONNECT%2C%20I%20want%20to%20book%20the%20Kushinagar%20One%20Day%20Tour."
+    target="_blank"
+  >
+    Enquire on WhatsApp
+  </a>
+
+</div>
+
+</article>
+
+
+<!-- PACKAGE 2 -->
+
+<article
+  class="package-card"
+  data-duration="1"
+  data-category="heritage"
+  data-search="heritage kushinagar local sightseeing"
+>
+
+<div class="package-image">
+
+  <div class="package-badge">
+    Heritage
+  </div>
+
+  <div class="package-icon">
+    🏛️
+  </div>
+
+</div>
+
+
+<div class="package-body">
+
+  <h3>
+    Heritage & Temple Tour
+  </h3>
+
+  <div class="package-sub">
+    Discover the historic heart of Kushinagar
+  </div>
+
+
+  <div class="package-meta">
+
+    <span class="meta">
+      ⏱ 1 Day
+    </span>
+
+    <span class="meta">
+      👥 Private
+    </span>
+
+    <span class="meta">
+      📸 Sightseeing
+    </span>
+
+  </div>
+
+
+  <div class="package-details">
+
+    <div>
+      📍 Mahaparinirvana Temple
+    </div>
+
+    <div>
+      📍 Ramabhar Stupa
+    </div>
+
+    <div>
+      📍 International Monasteries
+    </div>
+
+  </div>
+
+
+  <div class="package-price">
+
+    <div>
+
+      <small>
+        Starting from
+      </small>
+
+      <br>
+
+      <strong>
+        ₹1,299
+      </strong>
+
+    </div>
+
+    <small>
+      per person*
+    </small>
+
+  </div>
+
+
+  <a
+    class="book-btn"
+    href="https://wa.me/919999999999?text=Hello%20KUSHINARA%20CONNECT%2C%20I%20want%20to%20book%20the%20Heritage%20%26%20Temple%20Tour."
+    target="_blank"
+  >
+    Enquire on WhatsApp
+  </a>
+
+</div>
+
+</article>
+
+
+<!-- PACKAGE 3 -->
+
+<article
+  class="package-card"
+  data-duration="2"
+  data-category="family"
+  data-search="family kushinagar two day tour"
+>
+
+<div class="package-image">
+
+  <div class="package-badge">
+    Family
+  </div>
+
+  <div class="package-icon">
+    👨‍👩‍👧‍👦
+  </div>
+
+</div>
+
+
+<div class="package-body">
+
+  <h3>
+    Family Kushinagar Escape
+  </h3>
+
+  <div class="package-sub">
+    Comfortable sightseeing for the whole family
+  </div>
+
+
+  <div class="package-meta">
+
+    <span class="meta">
+      ⏱ 2 Days
+    </span>
+
+    <span class="meta">
+      👨‍👩‍👧 Family
+    </span>
+
+    <span class="meta">
+      🚗 Cab
+    </span>
+
+  </div>
+
+
+  <div class="package-details">
+
+    <div>
+      📍 Major Buddhist Sites
+    </div>
+
+    <div>
+      🏨 Stay Assistance
+    </div>
+
+    <div>
+      🚗 Local Transport
+    </div>
+
+  </div>
+
+
+  <div class="package-price">
+
+    <div>
+
+      <small>
+        Starting from
+      </small>
+
+      <br>
+
+      <strong>
+        ₹2,999
+      </strong>
+
+    </div>
+
+    <small>
+      per person*
+    </small>
+
+  </div>
+
+
+  <a
+    class="book-btn"
+    href="https://wa.me/919999999999?text=Hello%20KUSHINARA%20CONNECT%2C%20I%20want%20to%20book%20the%20Family%20Kushinagar%20Escape."
+    target="_blank"
+  >
+    Enquire on WhatsApp
+  </a>
+
+</div>
+
+</article>
+
+
+<!-- PACKAGE 4 -->
+
+<article
+  class="package-card"
+  data-duration="2"
+  data-category="buddhist"
+  data-search="buddhist circuit kushinagar two days"
+>
+
+<div class="package-image">
+
+  <div class="package-badge">
+    Spiritual
+  </div>
+
+  <div class="package-icon">
+    ☸️
+  </div>
+
+</div>
+
+
+<div class="package-body">
+
+  <h3>
+    Buddhist Circuit Experience
+  </h3>
+
+  <div class="package-sub">
+    A deeper journey through Buddhist heritage
+  </div>
+
+
+  <div class="package-meta">
+
+    <span class="meta">
+      ⏱ 2 Days
+    </span>
+
+    <span class="meta">
+      ☸ Buddhist
+    </span>
+
+    <span class="meta">
+      🚗 Transport
+    </span>
+
+  </div>
+
+
+  <div class="package-details">
+
+    <div>
+      📍 Temple & Stupas
+    </div>
+
+    <div>
+      📍 Buddhist Monasteries
+    </div>
+
+    <div>
+      📍 Peaceful Sites
+    </div>
+
+  </div>
+
+
+  <div class="package-price">
+
+    <div>
+
+      <small>
+        Starting from
+      </small>
+
+      <br>
+
+      <strong>
+        ₹3,499
+      </strong>
+
+    </div>
+
+    <small>
+      per person*
+    </small>
+
+  </div>
+
+
+  <a
+    class="book-btn"
+    href="https://wa.me/919999999999?text=Hello%20KUSHINARA%20CONNECT%2C%20I%20want%20to%20book%20the%20Buddhist%20Circuit%20Experience."
+    target="_blank"
+  >
+    Enquire on WhatsApp
+  </a>
+
+</div>
+
+</article>
+
+
+<!-- PACKAGE 5 -->
+
+<article
+  class="package-card"
+  data-duration="3"
+  data-category="group"
+  data-search="group tour kushinagar three day"
+>
+
+<div class="package-image">
+
+  <div class="package-badge">
+    Groups
+  </div>
+
+  <div class="package-icon">
+    🚌
+  </div>
+
+</div>
+
+
+<div class="package-body">
+
+  <h3>
+    Group Kushinagar Explorer
+  </h3>
+
+  <div class="package-sub">
+    Designed for school, family and travel groups
+  </div>
+
+
+  <div class="package-meta">
+
+    <span class="meta">
+      ⏱ 3 Days+
+    </span>
+
+    <span class="meta">
+      👥 Groups
+    </span>
+
+    <span class="meta">
+      🚌 Transport
+    </span>
+
+  </div>
+
+
+  <div class="package-details">
+
+    <div>
+      🚌 Group Transport
+    </div>
+
+    <div>
+      🏨 Stay Assistance
+    </div>
+
+    <div>
+      📍 Sightseeing Plan
+    </div>
+
+  </div>
+
+
+  <div class="package-price">
+
+    <div>
+
+      <small>
+        Starting from
+      </small>
+
+      <br>
+
+      <strong>
+        ₹4,999
+      </strong>
+
+    </div>
+
+    <small>
+      per person*
+    </small>
+
+  </div>
+
+
+  <a
+    class="book-btn"
+    href="https://wa.me/919999999999?text=Hello%20KUSHINARA%20CONNECT%2C%20I%20want%20to%20book%20the%20Group%20Kushinagar%20Explorer."
+    target="_blank"
+  >
+    Enquire on WhatsApp
+  </a>
+
+</div>
+
+</article>
+
+
+<!-- PACKAGE 6 -->
+
+<article
+  class="package-card"
+  data-duration="3"
+  data-category="family"
+  data-search="complete kushinagar family trip three day"
+>
+
+<div class="package-image">
+
+  <div class="package-badge">
+    Complete
+  </div>
+
+  <div class="package-icon">
+    ✨
+  </div>
+
+</div>
+
+
+<div class="package-body">
+
+  <h3>
+    Complete Kushinagar Journey
+  </h3>
+
+  <div class="package-sub">
+    A relaxed multi-day Kushinagar experience
+  </div>
+
+
+  <div class="package-meta">
+
+    <span class="meta">
+      ⏱ 3 Days+
+    </span>
+
+    <span class="meta">
+      👨‍👩‍👧 Family
+    </span>
+
+    <span class="meta">
+      ⭐ Premium
+    </span>
+
+  </div>
+
+
+  <div class="package-details">
+
+    <div>
+      🛕 Major Attractions
+    </div>
+
+    <div>
+      🏨 Stay Assistance
+    </div>
+
+    <div>
+      🚗 Local Travel
+    </div>
+
+  </div>
+
+
+  <div class="package-price">
+
+    <div>
+
+      <small>
+        Starting from
+      </small>
+
+      <br>
+
+      <strong>
+        ₹5,999
+      </strong>
+
+    </div>
+
+    <small>
+      per person*
+    </small>
+
+  </div>
+
+
+  <a
+    class="book-btn"
+    href="https://wa.me/919999999999?text=Hello%20KUSHINARA%20CONNECT%2C%20I%20want%20to%20book%20the%20Complete%20Kushinagar%20Journey."
+    target="_blank"
+  >
+    Enquire on WhatsApp
+  </a>
+
+</div>
+
+</article>
+
+
+<div
+  class="no-results"
+  id="noResults"
+>
+  No package found.
+  Try another search or category.
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="itinerary-section">
+
+<div class="itinerary">
+
+<div class="itinerary-head">
+
+  <div
+    class="eyebrow"
+    style="color:var(--gold);"
+  >
+    SIMPLE PLANNING
+  </div>
+
+  <h2>
+    Plan Your Journey in 4 Steps
+  </h2>
+
+  <p>
+    Choose a package, tell us your requirements
+    and let the local journey begin.
+  </p>
+
+</div>
+
+
+<div class="steps">
+
+
+<div class="step">
+
+  <div class="step-number">
+    01
+  </div>
+
+  <h3>
+    Choose a Package
+  </h3>
+
+  <p>
+    Select the tour that fits your
+    time and travel style.
+  </p>
+
+</div>
+
+
+<div class="step">
+
+  <div class="step-number">
+    02
+  </div>
+
+  <h3>
+    Send Enquiry
+  </h3>
+
+  <p>
+    Tell us your travel date,
+    group size and requirements.
+  </p>
+
+</div>
+
+
+<div class="step">
+
+  <div class="step-number">
+    03
+  </div>
+
+  <h3>
+    Confirm Details
+  </h3>
+
+  <p>
+    Discuss transport, stay,
+    itinerary and final pricing.
+  </p>
+
+</div>
+
+
+<div class="step">
+
+  <div class="step-number">
+    04
+  </div>
+
+  <h3>
+    Enjoy Kushinara
+  </h3>
+
+  <p>
+    Travel comfortably and
+    experience Kushinagar.
+  </p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<h2>
+  Want a Custom Kushinagar Trip?
+</h2>
+
+<p>
+  Tell us your number of days, group size and
+  places you want to visit. We can help create
+  a journey around your requirements.
+</p>
+
+<a
+  href="https://wa.me/919999999999?text=Hello%20KUSHINARA%20CONNECT%2C%20I%20want%20a%20custom%20Kushinagar%20tour%20package."
+  target="_blank"
+  class="cta-btn"
+>
+  Plan My Trip →
+</a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div class="footer-brand">
+
+<a href="index.html" class="logo">
+
+  <div class="logo-mark"></div>
+
+  <div>
+
+    <div class="logo-title">
+      KUSHINARA CONNECT
+    </div>
+
+    <div class="logo-tagline">
+      DISCOVER • CONNECT • EXPERIENCE
+    </div>
+
+  </div>
+
+</a>
+
+<p>
+  Discover Kushinagar, connect with local businesses
+  and experience the city with ease.
+</p>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+  Explore
+</div>
+
+<div class="footer-links">
+
+<a href="places.html">
+  Places
+</a>
+
+<a href="hotels.html">
+  Hotels & Stay
+</a>
+
+<a href="cabs.html">
+  Cabs
+</a>
+
+<a href="packages.html">
+  Tour Packages
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+  Discover
+</div>
+
+<div class="footer-links">
+
+<a href="restaurants.html">
+  Restaurants
+</a>
+
+<a href="businesses.html">
+  Local Businesses
+</a>
+
+<a href="blog.html">
+  Travel Guide
+</a>
+
+<a href="contact.html">
+  Contact
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+  Kushinara
+</div>
+
+<div class="footer-links">
+
+<a href="places.html">
+  Explore Places
+</a>
+
+<a href="cabs.html">
+  Book a Cab
+</a>
+
+<a href="hotels.html">
+  Find a Stay
+</a>
+
+<a href="packages.html">
+  Plan Your Trip
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+  © 2026 KUSHINARA CONNECT. All rights reserved.
+</span>
+
+<span>
+  DISCOVER • CONNECT • EXPERIENCE
+</span>
+
+</div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/* MOBILE MENU */
+
+const menuBtn =
+  document.getElementById("menuBtn");
+
+const navLinks =
+  document.getElementById("navLinks");
+
+menuBtn.addEventListener(
+  "click",
+  () => {
+
+    navLinks.classList.toggle("show");
+
+    menuBtn.textContent =
+      navLinks.classList.contains("show")
+      ? "✕"
+      : "☰";
+
+  }
+);
+
+
+/* PACKAGE FILTER */
+
+function filterPackages(){
+
+  const search =
+    document
+      .getElementById("search")
+      .value
+      .toLowerCase()
+      .trim();
+
+  const duration =
+    document
+      .getElementById("duration")
+      .value;
+
+  const category =
+    document
+      .getElementById("category")
+      .value;
+
+  const cards =
+    document.querySelectorAll(
+      ".package-card"
+    );
+
+  let found = false;
+
+
+  cards.forEach(card => {
+
+    const cardText =
+      card.dataset.search
+      .toLowerCase();
+
+    const cardDuration =
+      card.dataset.duration;
+
+    const cardCategory =
+      card.dataset.category;
+
+
+    const searchMatch =
+      !search ||
+      cardText.includes(search);
+
+    const durationMatch =
+      duration === "all" ||
+      cardDuration === duration;
+
+    const categoryMatch =
+      category === "all" ||
+      cardCategory === category;
+
+
+    if(
+      searchMatch &&
+      durationMatch &&
+      categoryMatch
+    ){
+
+      card.style.display = "";
+
+      found = true;
+
+    }else{
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+
+  document.getElementById("noResults")
+    .style.display =
+      found ? "none" : "block";
+
+}
+
+
+/* LIVE SEARCH */
+
+document
+  .getElementById("search")
+  .addEventListener(
+    "input",
+    filterPackages
+  );
+
+
+document
+  .getElementById("duration")
+  .addEventListener(
+    "change",
+    filterPackages
+  );
+
+
+document
+  .getElementById("category")
+  .addEventListener(
+    "change",
+    filterPackages
+  );
+
+</script>
+
+</body>
+</html>
