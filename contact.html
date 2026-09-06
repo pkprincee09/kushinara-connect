@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | KUSHINARA CONNECT</title>
+
+<meta name="description"
+content="Contact KUSHINARA CONNECT for travel, stay, cab, package and local business enquiries.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --navy:#071a2b;
+  --navy2:#0c2940;
+  --gold:#c9a45c;
+  --gold-light:#e4cc98;
+  --cream:#f7f6f2;
+  --white:#fff;
+  --text:#14202b;
+  --muted:#687580;
+  --border:rgba(7,26,43,.11);
+  --shadow:0 18px 50px rgba(7,26,43,.10);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"DM Sans",sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+  font:inherit;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  background:var(--navy);
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-mark{
+  width:49px;
+  height:49px;
+  border:1.5px solid var(--gold);
+  border-radius:15px 15px 15px 5px;
+  position:relative;
+  background:rgba(255,255,255,.04);
+}
+
+.logo-mark:before{
+  content:"K";
+  position:absolute;
+  left:9px;
+  top:5px;
+  font-family:"Playfair Display",serif;
+  font-size:27px;
+  font-weight:700;
+  color:var(--gold-light);
+}
+
+.logo-mark:after{
+  content:"C";
+  position:absolute;
+  right:7px;
+  bottom:3px;
+  font-family:"Playfair Display",serif;
+  font-size:27px;
+  font-weight:700;
+  color:white;
+}
+
+.logo-title{
+  font-size:17px;
+  font-weight:700;
+  letter-spacing:.7px;
+}
+
+.logo-tagline{
+  color:var(--gold-light);
+  font-size:8px;
+  letter-spacing:1.8px;
+  margin-top:2px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+
+.nav-links a{
+  padding:10px 13px;
+  border-radius:10px;
+  color:rgba(255,255,255,.78);
+  font-size:14px;
+  transition:.25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+  color:white;
+  background:rgba(255,255,255,.08);
+}
+
+.nav-cta{
+  background:var(--gold)!important;
+  color:var(--navy)!important;
+  font-weight:700;
+}
+
+.menu-btn{
+  display:none;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.06);
+  color:white;
+  width:43px;
+  height:43px;
+  border-radius:11px;
+  cursor:pointer;
+  font-size:22px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  background:
+    linear-gradient(135deg,rgba(7,26,43,.97),rgba(12,41,64,.92)),
+    url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+  color:white;
+  padding:85px 0 95px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:430px;
+  height:430px;
+  border:1px solid rgba(201,164,92,.18);
+  border-radius:50%;
+  right:-150px;
+  top:-160px;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:760px;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--gold-light);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.eyebrow:before{
+  content:"";
+  width:28px;
+  height:1px;
+  background:var(--gold);
+}
+
+.hero h1{
+  font-family:"Playfair Display",serif;
+  font-size:clamp(42px,6vw,68px);
+  line-height:1.08;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  color:var(--gold-light);
+}
+
+.hero p{
+  max-width:650px;
+  color:rgba(255,255,255,.76);
+  font-size:17px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-section{
+  padding:80px 0;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:28px;
+  align-items:stretch;
+}
+
+/* LEFT */
+
+.contact-info{
+  background:var(--navy);
+  color:white;
+  border-radius:22px;
+  padding:38px;
+  position:relative;
+  overflow:hidden;
+}
+
+.contact-info:after{
+  content:"";
+  position:absolute;
+  width:280px;
+  height:280px;
+  border:1px solid rgba(201,164,92,.17);
+  border-radius:50%;
+  right:-150px;
+  bottom:-140px;
+}
+
+.contact-info h2{
+  font-family:"Playfair Display",serif;
+  font-size:32px;
+  margin-bottom:12px;
+  position:relative;
+  z-index:2;
+}
+
+.contact-info > p{
+  color:rgba(255,255,255,.67);
+  font-size:14px;
+  margin-bottom:32px;
+  position:relative;
+  z-index:2;
+}
+
+.info-item{
+  display:flex;
+  gap:15px;
+  margin-bottom:23px;
+  position:relative;
+  z-index:2;
+}
+
+.info-icon{
+  width:44px;
+  height:44px;
+  min-width:44px;
+  border:1px solid rgba(201,164,92,.45);
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--gold-light);
+  font-size:18px;
+}
+
+.info-item h4{
+  font-size:14px;
+  margin-bottom:3px;
+}
+
+.info-item p{
+  color:rgba(255,255,255,.6);
+  font-size:13px;
+}
+
+.info-item a{
+  color:var(--gold-light);
+}
+
+/* FORM */
+
+.contact-form{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:38px;
+  box-shadow:var(--shadow);
+}
+
+.form-heading{
+  margin-bottom:25px;
+}
+
+.form-heading h2{
+  font-family:"Playfair Display",serif;
+  font-size:32px;
+  margin-bottom:6px;
+}
+
+.form-heading p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+
+.form-group.full{
+  grid-column:1/-1;
+}
+
+.form-group label{
+  font-size:12px;
+  font-weight:700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  border:1px solid var(--border);
+  background:#fbfbfa;
+  border-radius:11px;
+  outline:none;
+  padding:13px 14px;
+  color:var(--text);
+  transition:.2s;
+}
+
+.form-group input,
+.form-group select{
+  height:48px;
+}
+
+.form-group textarea{
+  min-height:125px;
+  resize:vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color:var(--gold);
+  background:white;
+}
+
+.submit-btn{
+  margin-top:20px;
+  width:100%;
+  height:52px;
+  border:none;
+  border-radius:11px;
+  background:var(--gold);
+  color:var(--navy);
+  font-weight:700;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.submit-btn:hover{
+  background:var(--gold-light);
+  transform:translateY(-2px);
+}
+
+.form-note{
+  text-align:center;
+  color:var(--muted);
+  font-size:11px;
+  margin-top:10px;
+}
+
+/* ================= QUICK CONTACT ================= */
+
+.quick-section{
+  padding:0 0 80px;
+}
+
+.quick-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.quick-card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:17px;
+  padding:25px;
+  transition:.25s;
+}
+
+.quick-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+}
+
+.quick-icon{
+  font-size:25px;
+  margin-bottom:12px;
+}
+
+.quick-card h3{
+  font-family:"Playfair Display",serif;
+  font-size:22px;
+  margin-bottom:7px;
+}
+
+.quick-card p{
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:15px;
+}
+
+.quick-card a{
+  color:#927537;
+  font-weight:700;
+  font-size:13px;
+}
+
+/* ================= PARTNERSHIP ================= */
+
+.partner{
+  background:white;
+  padding:80px 0;
+}
+
+.partner-box{
+  background:var(--navy);
+  border-radius:22px;
+  color:white;
+  padding:48px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  overflow:hidden;
+  position:relative;
+}
+
+.partner-box:after{
+  content:"";
+  position:absolute;
+  width:340px;
+  height:340px;
+  border:1px solid rgba(201,164,92,.14);
+  border-radius:50%;
+  right:-170px;
+  top:-170px;
+}
+
+.partner-content{
+  position:relative;
+  z-index:2;
+}
+
+.partner-content h2{
+  font-family:"Playfair Display",serif;
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.partner-content p{
+  color:rgba(255,255,255,.65);
+  max-width:650px;
+}
+
+.partner-btn{
+  position:relative;
+  z-index:2;
+  flex-shrink:0;
+  background:var(--gold);
+  color:var(--navy);
+  padding:14px 21px;
+  border-radius:11px;
+  font-weight:700;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#04121e;
+  color:white;
+  padding:60px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:45px;
+  padding-bottom:45px;
+}
+
+.footer-brand p{
+  color:rgba(255,255,255,.6);
+  font-size:14px;
+  max-width:360px;
+  margin-top:17px;
+}
+
+.footer-title{
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:17px;
+  color:var(--gold-light);
+}
+
+.footer-links{
+  display:grid;
+  gap:10px;
+}
+
+.footer-links a{
+  color:rgba(255,255,255,.62);
+  font-size:13px;
+}
+
+.footer-links a:hover{
+  color:white;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:20px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:rgba(255,255,255,.45);
+  font-size:12px;
+}
+
+/* ================= SUCCESS ================= */
+
+.success{
+  display:none;
+  margin-top:15px;
+  padding:13px;
+  background:rgba(201,164,92,.12);
+  border:1px solid rgba(201,164,92,.3);
+  border-radius:10px;
+  color:#80642d;
+  font-size:13px;
+  text-align:center;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+  .nav-links{
+    position:absolute;
+    top:76px;
+    left:0;
+    right:0;
+    background:var(--navy);
+    border-top:1px solid rgba(255,255,255,.08);
+    padding:14px 4%;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .nav-links.show{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:13px;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .quick-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .partner-box{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .footer-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:650px){
+
+  .nav{
+    min-height:70px;
+  }
+
+  .logo-mark{
+    width:43px;
+    height:43px;
+  }
+
+  .logo-mark:before,
+  .logo-mark:after{
+    font-size:24px;
+  }
+
+  .logo-title{
+    font-size:14px;
+  }
+
+  .logo-tagline{
+    font-size:7px;
+  }
+
+  .hero{
+    padding:65px 0 75px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .contact-section{
+    padding:60px 0;
+  }
+
+  .contact-info,
+  .contact-form{
+    padding:25px 20px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .form-group.full{
+    grid-column:auto;
+  }
+
+  .quick-grid{
+    grid-template-columns:1fr;
+  }
+
+  .partner{
+    padding:60px 0;
+  }
+
+  .partner-box{
+    padding:30px 22px;
+  }
+
+  .partner-content h2{
+    font-size:30px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="container nav">
+
+<a href="index.html" class="logo">
+
+<div class="logo-mark"></div>
+
+<div>
+<div class="logo-title">KUSHINARA CONNECT</div>
+<div class="logo-tagline">
+DISCOVER • CONNECT • EXPERIENCE
+</div>
+</div>
+
+</a>
+
+
+<nav class="nav-links" id="navLinks">
+
+<a href="index.html">Home</a>
+<a href="places.html">Places</a>
+<a href="hotels.html">Stay</a>
+<a href="cabs.html">Cabs</a>
+<a href="packages.html">Packages</a>
+<a href="restaurants.html">Food</a>
+<a href="businesses.html">Businesses</a>
+<a href="blog.html">Guide</a>
+<a href="contact.html" class="active nav-cta">Contact</a>
+
+</nav>
+
+
+<button class="menu-btn" id="menuBtn">
+☰
+</button>
+
+</div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+GET IN TOUCH
+</div>
+
+<h1>
+Let's plan your
+<span>Kushinara</span> journey.
+</h1>
+
+<p>
+Have a question about places, stays, cabs, packages or local businesses?
+Send us an enquiry and we'll help you find the right direction.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact-section">
+
+<div class="container">
+
+<div class="contact-grid">
+
+
+<!-- LEFT -->
+
+<div class="contact-info">
+
+<h2>
+Contact KUSHINARA CONNECT
+</h2>
+
+<p>
+We're here to help travellers discover Kushinagar
+and connect with useful local services.
+</p>
+
+
+<div class="info-item">
+
+<div class="info-icon">
+📞
+</div>
+
+<div>
+
+<h4>
+Phone
+</h4>
+
+<p>
+<a href="tel:+919999999999">
++91 99999 99999
+</a>
+</p>
+
+</div>
+
+</div>
+
+
+<div class="info-item">
+
+<div class="info-icon">
+💬
+</div>
+
+<div>
+
+<h4>
+WhatsApp
+</h4>
+
+<p>
+<a href="https://wa.me/919999999999" target="_blank">
+Chat with us on WhatsApp
+</a>
+</p>
+
+</div>
+
+</div>
+
+
+<div class="info-item">
+
+<div class="info-icon">
+✉
+</div>
+
+<div>
+
+<h4>
+Email
+</h4>
+
+<p>
+hello@kushinaraconnect.in
+</p>
+
+</div>
+
+</div>
+
+
+<div class="info-item">
+
+<div class="info-icon">
+📍
+</div>
+
+<div>
+
+<h4>
+Location
+</h4>
+
+<p>
+Kushinagar, Uttar Pradesh, India
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FORM -->
+
+<div class="contact-form">
+
+<div class="form-heading">
+
+<h2>
+Send an Enquiry
+</h2>
+
+<p>
+Fill in the details and continue your enquiry on WhatsApp.
+</p>
+
+</div>
+
+
+<form id="contactForm">
+
+
+<div class="form-grid">
+
+
+<div class="form-group">
+
+<label>
+Your Name *
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Phone Number *
+</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="Enter phone number"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Enquiry Type
+</label>
+
+<select id="type">
+
+<option value="General Enquiry">
+General Enquiry
+</option>
+
+<option value="Tour Package">
+Tour Package
+</option>
+
+<option value="Hotel / Stay">
+Hotel / Stay
+</option>
+
+<option value="Cab / Transport">
+Cab / Transport
+</option>
+
+<option value="Restaurant / Food">
+Restaurant / Food
+</option>
+
+<option value="Local Business">
+Local Business
+</option>
+
+<option value="Business Partnership">
+Business Partnership
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Travel Date
+</label>
+
+<input
+type="date"
+id="date"
+>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>
+Your Message *
+</label>
+
+<textarea
+id="message"
+placeholder="Tell us what you need help with..."
+required
+></textarea>
+
+</div>
+
+
+</div>
+
+
+<button
+type="submit"
+class="submit-btn"
+>
+Send Enquiry on WhatsApp →
+</button>
+
+<div class="form-note">
+Your enquiry will open in WhatsApp.
+</div>
+
+<div class="success" id="success">
+Opening WhatsApp...
+</div>
+
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= QUICK CONTACT ================= -->
+
+<section class="quick-section">
+
+<div class="container">
+
+<div class="quick-grid">
+
+
+<div class="quick-card">
+
+<div class="quick-icon">
+🗺️
+</div>
+
+<h3>
+Explore Places
+</h3>
+
+<p>
+Looking for places to visit in Kushinagar?
+</p>
+
+<a href="places.html">
+Explore Places →
+</a>
+
+</div>
+
+
+<div class="quick-card">
+
+<div class="quick-icon">
+🏨
+</div>
+
+<h3>
+Find a Stay
+</h3>
+
+<p>
+Need help finding accommodation for your trip?
+</p>
+
+<a href="hotels.html">
+Explore Stays →
+</a>
+
+</div>
+
+
+<div class="quick-card">
+
+<div class="quick-icon">
+🚕
+</div>
+
+<h3>
+Book Local Travel
+</h3>
+
+<p>
+Looking for a local cab or transport option?
+</p>
+
+<a href="cabs.html">
+Find a Cab →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PARTNERSHIP ================= -->
+
+<section class="partner">
+
+<div class="container">
+
+<div class="partner-box">
+
+<div class="partner-content">
+
+<h2>
+Are you a local business?
+</h2>
+
+<p>
+Get discovered by travellers visiting Kushinagar.
+List your hotel, restaurant, cab service, shop or local business
+on KUSHINARA CONNECT.
+</p>
+
+</div>
+
+
+<a
+href="businesses.html"
+class="partner-btn"
+>
+List Your Business →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div class="footer-brand">
+
+<a href="index.html" class="logo">
+
+<div class="logo-mark"></div>
+
+<div>
+
+<div class="logo-title">
+KUSHINARA CONNECT
+</div>
+
+<div class="logo-tagline">
+DISCOVER • CONNECT • EXPERIENCE
+</div>
+
+</div>
+
+</a>
+
+<p>
+A local tourism and discovery platform designed to help travellers
+explore Kushinagar and connect with local services.
+</p>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+Explore
+</div>
+
+<div class="footer-links">
+
+<a href="places.html">Places</a>
+<a href="hotels.html">Stay</a>
+<a href="cabs.html">Cabs</a>
+<a href="packages.html">Packages</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+Discover
+</div>
+
+<div class="footer-links">
+
+<a href="restaurants.html">Food</a>
+<a href="businesses.html">Businesses</a>
+<a href="blog.html">Travel Guide</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+For Businesses
+</div>
+
+<div class="footer-links">
+
+<a href="businesses.html">
+List Your Business
+</a>
+
+<a href="contact.html">
+Partner With Us
+</a>
+
+<a href="contact.html">
+Advertise
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+<div>
+© 2026 KUSHINARA CONNECT. All rights reserved.
+</div>
+
+<div>
+Discover • Connect • Experience
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/* MOBILE MENU */
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const navLinks =
+document.getElementById("navLinks");
+
+menuBtn.addEventListener("click",function(){
+
+navLinks.classList.toggle("show");
+
+});
+
+
+document.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+link.addEventListener("click",function(){
+
+navLinks.classList.remove("show");
+
+});
+
+});
+
+
+/* WHATSAPP FORM */
+
+const form =
+document.getElementById("contactForm");
+
+form.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+
+const name =
+document.getElementById("name").value.trim();
+
+const phone =
+document.getElementById("phone").value.trim();
+
+const type =
+document.getElementById("type").value;
+
+const date =
+document.getElementById("date").value;
+
+const message =
+document.getElementById("message").value.trim();
+
+
+if(!name || !phone || !message){
+
+alert("Please fill all required fields.");
+
+return;
+
+}
+
+
+/* CHANGE THIS NUMBER */
+
+const whatsappNumber =
+"919999999999";
+
+
+let whatsappMessage =
+"Hello KUSHINARA CONNECT 👋\n\n";
+
+whatsappMessage +=
+"*New Enquiry*\n\n";
+
+whatsappMessage +=
+"Name: " + name + "\n";
+
+whatsappMessage +=
+"Phone: " + phone + "\n";
+
+whatsappMessage +=
+"Enquiry Type: " + type + "\n";
+
+if(date){
+
+whatsappMessage +=
+"Travel Date: " + date + "\n";
+
+}
+
+whatsappMessage +=
+"\nMessage:\n" + message;
+
+
+const whatsappURL =
+"https://wa.me/" +
+whatsappNumber +
+"?text=" +
+encodeURIComponent(whatsappMessage);
+
+
+document.getElementById("success")
+.style.display="block";
+
+
+setTimeout(function(){
+
+window.open(
+whatsappURL,
+"_blank"
+);
+
+},500);
+
+});
+
+
+</script>
+
+</body>
+</html>
