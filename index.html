@@ -1,1 +1,1139 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kushinara Connect — Discover Kushinara</title>
+
+  <meta
+    name="description"
+    content="Discover Kushinara — hotels, cabs, tourist places, restaurants and local experiences."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --dark: #0d1512;
+      --dark-2: #13201b;
+      --green: #214b3a;
+      --green-light: #dfece5;
+      --cream: #f6f3eb;
+      --white: #ffffff;
+      --gold: #c9a96b;
+      --text: #1c241f;
+      --muted: #6e756f;
+      --border: rgba(0,0,0,0.08);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 20;
+      color: white;
+    }
+
+    .nav {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      font-size: 19px;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(255,255,255,.4);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+    }
+
+    .desktop-menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      color: rgba(255,255,255,.9);
+    }
+
+    .desktop-menu a {
+      transition: .2s;
+    }
+
+    .desktop-menu a:hover {
+      color: var(--gold);
+    }
+
+    .nav-btn {
+      border: 1px solid rgba(255,255,255,.35);
+      padding: 10px 17px;
+      border-radius: 30px;
+    }
+
+    .mobile-menu {
+      display: none;
+      border: 1px solid rgba(255,255,255,.35);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: transparent;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 720px;
+      position: relative;
+      overflow: hidden;
+      color: white;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(8,19,15,.92) 0%,
+          rgba(8,19,15,.72) 45%,
+          rgba(8,19,15,.32) 100%
+        ),
+        url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      padding-top: 60px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #e5d2a9;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: .98;
+      font-weight: 600;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    .hero-text {
+      max-width: 590px;
+      font-size: 17px;
+      color: rgba(255,255,255,.82);
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+      padding: 13px 21px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: var(--dark);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      color: white;
+      border: 1px solid rgba(255,255,255,.4);
+      background: rgba(255,255,255,.06);
+      backdrop-filter: blur(10px);
+    }
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .search-wrap {
+      margin-top: -46px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .search-card {
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.12);
+      padding: 9px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr auto;
+      gap: 7px;
+    }
+
+    .search-field {
+      padding: 13px 15px;
+      border-radius: 13px;
+      background: #f7f7f4;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .search-field span {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .search-field strong {
+      font-size: 14px;
+    }
+
+    .search-btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      border-radius: 13px;
+      padding: 0 23px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* =========================
+       SECTION
+    ========================= */
+
+    section {
+      padding: 92px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 25px;
+      margin-bottom: 38px;
+    }
+
+    .section-label {
+      color: var(--green);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.05;
+      font-weight: 600;
+    }
+
+    .section-description {
+      color: var(--muted);
+      max-width: 480px;
+      font-size: 14px;
+    }
+
+    .text-link {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 25px;
+      min-height: 190px;
+      transition: .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,.07);
+    }
+
+    .service-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 13px;
+      background: var(--green-light);
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      margin-bottom: 28px;
+    }
+
+    .service-card h3 {
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       PLACES
+    ========================= */
+
+    .places-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    .place-card {
+      min-height: 390px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      color: white;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: end;
+      transition: .3s;
+    }
+
+    .place-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .place-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 35%, rgba(0,0,0,.82));
+    }
+
+    .place-card:first-child {
+      min-height: 470px;
+    }
+
+    .place-1 {
+      background-image: url("https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=1000&q=80");
+    }
+
+    .place-2 {
+      background-image: url("https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1000&q=80");
+    }
+
+    .place-3 {
+      background-image: url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80");
+    }
+
+    .place-content {
+      position: relative;
+      z-index: 2;
+      padding: 24px;
+    }
+
+    .place-content span {
+      font-size: 11px;
+      color: #e5d2a9;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-weight: 700;
+    }
+
+    .place-content h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 27px;
+      margin-top: 5px;
+    }
+
+    /* =========================
+       FEATURE STRIP
+    ========================= */
+
+    .feature-section {
+      background: var(--dark);
+      color: white;
+    }
+
+    .feature-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .feature-layout h2 {
+      margin-bottom: 20px;
+    }
+
+    .feature-layout p {
+      color: rgba(255,255,255,.68);
+      max-width: 520px;
+      font-size: 15px;
+    }
+
+    .feature-list {
+      margin-top: 30px;
+      display: grid;
+      gap: 15px;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 13px;
+      align-items: center;
+    }
+
+    .check {
+      width: 28px;
+      height: 28px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #d7c28f;
+      font-size: 12px;
+    }
+
+    .feature-image {
+      height: 500px;
+      border-radius: 25px;
+      background:
+        linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.15)),
+        url("https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1100&q=85")
+        center/cover;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      background: var(--green-light);
+      border-radius: 28px;
+      padding: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .cta h2 {
+      max-width: 650px;
+    }
+
+    .cta p {
+      margin-top: 12px;
+      color: var(--muted);
+    }
+
+    .cta .btn-primary {
+      background: var(--green);
+      color: white;
+      flex-shrink: 0;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #0b110f;
+      color: white;
+      padding: 65px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr repeat(3, 1fr);
+      gap: 40px;
+      padding-bottom: 45px;
+    }
+
+    .footer-brand p {
+      color: rgba(255,255,255,.55);
+      max-width: 300px;
+      font-size: 13px;
+      margin-top: 15px;
+    }
+
+    .footer-col h4 {
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: rgba(255,255,255,.55);
+      font-size: 13px;
+      margin: 8px 0;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 20px;
+      color: rgba(255,255,255,.4);
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .desktop-menu {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: grid;
+        place-items: center;
+      }
+
+      .hero {
+        min-height: 680px;
+      }
+
+      .search-card {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .search-btn {
+        min-height: 52px;
+      }
+
+      .services {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .places-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .place-card:first-child {
+        grid-column: 1 / -1;
+      }
+
+      .feature-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .feature-image {
+        height: 380px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .nav {
+        height: 70px;
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+
+      .logo-mark {
+        width: 34px;
+        height: 34px;
+      }
+
+      .hero {
+        min-height: 650px;
+        background-position: 58% center;
+      }
+
+      .hero-content {
+        padding-top: 45px;
+      }
+
+      h1 {
+        font-size: 48px;
+        letter-spacing: -1.5px;
+      }
+
+      .hero-text {
+        font-size: 15px;
+      }
+
+      .hero-actions {
+        display: grid;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .search-wrap {
+        margin-top: -35px;
+      }
+
+      .search-card {
+        grid-template-columns: 1fr;
+        padding: 8px;
+      }
+
+      .search-btn {
+        padding: 15px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-description {
+        margin-top: 12px;
+      }
+
+      .section-head .text-link {
+        display: inline-block;
+        margin-top: 16px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: auto;
+      }
+
+      .places-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .place-card,
+      .place-card:first-child {
+        min-height: 340px;
+        grid-column: auto;
+      }
+
+      .feature-image {
+        height: 300px;
+      }
+
+      .cta {
+        padding: 35px 25px;
+        display: block;
+      }
+
+      .cta .btn {
+        margin-top: 25px;
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+
+      .footer-bottom span {
+        display: block;
+        margin-top: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+
+      <a href="index.html" class="logo">
+        <span class="logo-mark">K</span>
+        <span>KUSHINARA CONNECT</span>
+      </a>
+
+      <nav class="desktop-menu">
+        <a href="#places">Places</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-btn">Plan My Visit</a>
+      </nav>
+
+      <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <main>
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Welcome to Kushinara
+          </div>
+
+          <h1>
+            Discover the<br>
+            soul of Kushinara.
+          </h1>
+
+          <p class="hero-text">
+            Explore ancient Buddhist heritage, find the perfect stay,
+            book local travel and experience Kushinara with confidence.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#places" class="btn btn-primary">
+              Explore Kushinara →
+            </a>
+
+            <a href="#services" class="btn btn-outline">
+              Plan Your Visit
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SEARCH -->
+    <div class="container search-wrap">
+
+      <div class="search-card">
+
+        <div class="search-field">
+          <span>Looking for</span>
+          <strong>Hotels, Cabs, Places</strong>
+        </div>
+
+        <div class="search-field">
+          <span>Destination</span>
+          <strong>Kushinara</strong>
+        </div>
+
+        <div class="search-field">
+          <span>Travel type</span>
+          <strong>Explore & Stay</strong>
+        </div>
+
+        <button class="search-btn" onclick="startSearch()">
+          Search
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- SERVICES -->
+    <section id="services">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div>
+            <div class="section-label">Everything in one place</div>
+            <h2>Plan less.<br>Experience more.</h2>
+          </div>
+
+          <p class="section-description">
+            From your first search to your journey back home,
+            Kushinara Connect helps you discover and arrange
+            the essentials of your trip.
+          </p>
+
+        </div>
+
+
+        <div class="services">
+
+          <a href="hotels.html" class="service-card">
+            <div class="service-icon">🏨</div>
+            <h3>Find a Stay</h3>
+            <p>Discover hotels and comfortable places to stay.</p>
+          </a>
+
+          <a href="cabs.html" class="service-card">
+            <div class="service-icon">🚕</div>
+            <h3>Book a Cab</h3>
+            <p>Connect with local drivers for transfers and sightseeing.</p>
+          </a>
+
+          <a href="places.html" class="service-card">
+            <div class="service-icon">🛕</div>
+            <h3>Explore Places</h3>
+            <p>Discover important Buddhist and cultural destinations.</p>
+          </a>
+
+          <a href="packages.html" class="service-card">
+            <div class="service-icon">🧳</div>
+            <h3>Tour Packages</h3>
+            <p>Plan simple and memorable local travel experiences.</p>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PLACES -->
+    <section id="places">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div>
+            <div class="section-label">Must visit</div>
+            <h2>Places worth<br>remembering.</h2>
+          </div>
+
+          <a href="places.html" class="text-link">
+            View all places →
+          </a>
+
+        </div>
+
+
+        <div class="places-grid">
+
+          <a href="places.html" class="place-card place-1">
+
+            <div class="place-content">
+              <span>Spiritual landmark</span>
+              <h3>Mahaparinirvana Temple</h3>
+            </div>
+
+          </a>
+
+
+          <a href="places.html" class="place-card place-2">
+
+            <div class="place-content">
+              <span>Heritage</span>
+              <h3>Ramabhar Stupa</h3>
+            </div>
+
+          </a>
+
+
+          <a href="places.html" class="place-card place-3">
+
+            <div class="place-content">
+              <span>Explore</span>
+              <h3>Buddhist Kushinara</h3>
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="feature-section">
+
+      <div class="container feature-layout">
+
+        <div>
+
+          <div class="section-label" style="color:#d7c28f;">
+            Why Kushinara Connect
+          </div>
+
+          <h2>
+            Your local guide,<br>
+            made digital.
+          </h2>
+
+          <p>
+            We bring local travel information, trusted businesses
+            and useful services together so visitors can spend
+            more time experiencing Kushinara.
+          </p>
+
+          <div class="feature-list">
+
+            <div class="feature-item">
+              <div class="check">✓</div>
+              <span>Local travel information</span>
+            </div>
+
+            <div class="feature-item">
+              <div class="check">✓</div>
+              <span>Hotel and cab connections</span>
+            </div>
+
+            <div class="feature-item">
+              <div class="check">✓</div>
+              <span>Local business discovery</span>
+            </div>
+
+            <div class="feature-item">
+              <div class="check">✓</div>
+              <span>Simple WhatsApp assistance</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="feature-image"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="cta">
+
+          <div>
+            <div class="section-label">Start your journey</div>
+
+            <h2>
+              Planning a visit to Kushinara?
+            </h2>
+
+            <p>
+              Tell us what you need and we'll help you get started.
+            </p>
+          </div>
+
+          <a
+            href="https://wa.me/919999999999"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            Chat on WhatsApp →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo">
+            <span class="logo-mark">K</span>
+            <span>KUSHINARA CONNECT</span>
+          </a>
+
+          <p>
+            Discover Kushinara. Connect with local travel,
+            stays, experiences and businesses.
+          </p>
+
+        </div>
+
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="places.html">Tourist Places</a>
+          <a href="hotels.html">Hotels</a>
+          <a href="cabs.html">Cabs</a>
+          <a href="packages.html">Packages</a>
+        </div>
+
+
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <a href="restaurants.html">Restaurants</a>
+          <a href="businesses.html">Local Businesses</a>
+          <a href="blog.html">Travel Guide</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+
+        <div class="footer-col">
+          <h4>For Businesses</h4>
+          <a href="businesses.html">List Your Business</a>
+          <a href="contact.html">Digital Marketing</a>
+          <a href="contact.html">Partner With Us</a>
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Kushinara Connect. All rights reserved.
+        </span>
+
+        <span>
+          Made for Kushinara, Uttar Pradesh.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    function toggleMenu() {
+      alert("Mobile menu will be connected when the navigation system is added.");
+    }
+
+    function startSearch() {
+      alert(
+        "Search system will be connected next. Hotels, Cabs and Tourist Places will be searchable here."
+      );
+    }
+
+  </script>
+
+</body>
+</html>
