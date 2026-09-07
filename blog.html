@@ -809,6 +809,326 @@
         flex-direction:column;
       }
     }
+    /* =========================================================
+   COMPLETE KUSHINAGAR TRAVEL GUIDE
+========================================================= */
+
+.complete-guide{
+  background:#f7f6f2;
+  padding:90px 0;
+  scroll-margin-top:90px;
+}
+
+.guide-header{
+  max-width:850px;
+  margin:0 auto 45px;
+  text-align:center;
+}
+
+.guide-header .eyebrow{
+  color:#c9a45c;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+  margin-bottom:14px;
+}
+
+.guide-header h2{
+  color:#071a2b;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(34px,5vw,58px);
+  line-height:1.08;
+  margin:0 0 18px;
+}
+
+.guide-header h2 span{
+  color:#c9a45c;
+}
+
+.guide-header p{
+  color:#687580;
+  font-size:16px;
+  line-height:1.8;
+}
+
+/* BIG IMAGE PLACEHOLDER */
+
+.guide-main-image{
+  width:100%;
+  min-height:430px;
+  border-radius:28px;
+  background:
+    linear-gradient(135deg,#0c2940,#071a2b);
+  border:1px solid rgba(201,164,92,.35);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+  margin-bottom:45px;
+  box-shadow:0 25px 70px rgba(7,26,43,.16);
+  position:relative;
+}
+
+.guide-main-image img{
+  width:100%;
+  height:100%;
+  min-height:430px;
+  object-fit:cover;
+  display:block;
+}
+
+.image-placeholder{
+  padding:50px;
+  color:white;
+}
+
+.image-placeholder .image-icon{
+  font-size:58px;
+  margin-bottom:15px;
+}
+
+.image-placeholder h3{
+  margin:0 0 10px;
+  font-family:"Playfair Display",serif;
+  font-size:30px;
+}
+
+.image-placeholder p{
+  margin:0;
+  color:#e4cc98;
+  font-size:14px;
+}
+
+/* LANGUAGE BOX */
+
+.language-box{
+  background:white;
+  border:1px solid rgba(7,26,43,.08);
+  border-radius:22px;
+  padding:25px;
+  margin-bottom:40px;
+  box-shadow:0 12px 40px rgba(7,26,43,.07);
+}
+
+.language-box h3{
+  color:#071a2b;
+  margin:0 0 16px;
+  font-size:20px;
+}
+
+.language-controls{
+  display:grid;
+  grid-template-columns:1fr 220px 150px;
+  gap:12px;
+}
+
+.language-controls input,
+.language-controls select{
+  width:100%;
+  padding:14px 16px;
+  border:1px solid #dce1e5;
+  border-radius:12px;
+  outline:none;
+  font:inherit;
+  background:#fff;
+}
+
+.translate-btn{
+  border:0;
+  border-radius:12px;
+  background:#071a2b;
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.translate-btn:hover{
+  background:#c9a45c;
+  color:#071a2b;
+}
+
+/* GUIDE CONTENT */
+
+.guide-content{
+  max-width:950px;
+  margin:auto;
+}
+
+.guide-section{
+  background:#fff;
+  border:1px solid rgba(7,26,43,.07);
+  border-radius:22px;
+  padding:32px;
+  margin-bottom:22px;
+  box-shadow:0 10px 35px rgba(7,26,43,.05);
+}
+
+.guide-section h3{
+  margin:0 0 15px;
+  color:#071a2b;
+  font-family:"Playfair Display",serif;
+  font-size:27px;
+}
+
+.guide-section h3 span{
+  color:#c9a45c;
+}
+
+.guide-section p{
+  color:#596873;
+  line-height:1.85;
+  margin:0 0 12px;
+}
+
+.guide-section ul{
+  margin:15px 0 0;
+  padding-left:22px;
+}
+
+.guide-section li{
+  color:#596873;
+  line-height:1.8;
+  margin-bottom:7px;
+}
+
+/* PLACE CARDS */
+
+.guide-place-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin-top:20px;
+}
+
+.guide-place{
+  padding:20px;
+  border-radius:16px;
+  background:#f7f6f2;
+  border:1px solid rgba(201,164,92,.18);
+}
+
+.guide-place strong{
+  display:block;
+  color:#071a2b;
+  margin-bottom:7px;
+}
+
+.guide-place span{
+  color:#687580;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* ITINERARY */
+
+.itinerary{
+  display:grid;
+  gap:15px;
+  margin-top:20px;
+}
+
+.day-card{
+  border-left:4px solid #c9a45c;
+  background:#f7f6f2;
+  border-radius:14px;
+  padding:20px;
+}
+
+.day-card strong{
+  color:#071a2b;
+  display:block;
+  margin-bottom:8px;
+}
+
+/* FAQ */
+
+.faq-item{
+  border-bottom:1px solid #e5e8ea;
+  padding:18px 0;
+}
+
+.faq-item:last-child{
+  border-bottom:0;
+}
+
+.faq-item summary{
+  cursor:pointer;
+  font-weight:700;
+  color:#071a2b;
+}
+
+.faq-item p{
+  margin-top:12px;
+}
+
+/* GUIDE LINKS */
+
+.guide-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:20px;
+}
+
+.guide-link{
+  display:inline-flex;
+  align-items:center;
+  padding:12px 18px;
+  border-radius:12px;
+  background:#071a2b;
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:700;
+  transition:.2s;
+}
+
+.guide-link:hover{
+  background:#c9a45c;
+  color:#071a2b;
+}
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+  .complete-guide{
+    padding:65px 0;
+  }
+
+  .guide-main-image{
+    min-height:280px;
+    border-radius:20px;
+  }
+
+  .guide-main-image img{
+    min-height:280px;
+  }
+
+  .image-placeholder{
+    padding:30px 20px;
+  }
+
+  .image-placeholder h3{
+    font-size:24px;
+  }
+
+  .language-controls{
+    grid-template-columns:1fr;
+  }
+
+  .guide-section{
+    padding:23px;
+    border-radius:18px;
+  }
+
+  .guide-place-grid{
+    grid-template-columns:1fr;
+  }
+
+}
   </style>
 </head>
 
@@ -1090,7 +1410,7 @@
             A beginner-friendly guide to planning your Kushinagar journey.
           </p>
 
-          <a href="#" class="read-link">
+          <a href="#complete-guide" class="read-link">
             Read Guide →
           </a>
 
