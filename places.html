@@ -171,231 +171,19 @@
        HEADER
     ===================================================== */
 
-    header {
-
-      background: var(--navy);
-
-      color: white;
-
-      position: relative;
-
-      z-index: 100;
-
-    }
-
-
-    .navbar {
-
-      min-height: 88px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      gap: 25px;
-
-    }
-
-
-    .logo {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 12px;
-
-    }
-
-
-    .logo-mark {
-
-      width: 49px;
-
-      height: 49px;
-
-      border: 1.5px solid var(--gold);
-
-      border-radius: 15px 15px 15px 5px;
-
-      position: relative;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      background: rgba(255,255,255,.04);
-
-      flex-shrink: 0;
-
-    }
-
-
-    .logo-mark::before {
-
-      content: "K";
-
-      font-family: "Playfair Display", serif;
-
-      font-size: 27px;
-
-      font-weight: 700;
-
-      color: var(--gold-light);
-
-      position: absolute;
-
-      left: 9px;
-
-      top: 5px;
-
-    }
-
-
-    .logo-mark::after {
-
-      content: "C";
-
-      font-family: "Playfair Display", serif;
-
-      font-size: 27px;
-
-      font-weight: 700;
-
-      color: white;
-
-      position: absolute;
-
-      right: 7px;
-
-      bottom: 3px;
-
-    }
-
-
-    .logo-title {
-
-      font-family: "Playfair Display", serif;
-
-      font-size: 19px;
-
-      font-weight: 700;
-
-      letter-spacing: 1.3px;
-
-      line-height: 1;
-
-    }
-
-
-    .logo-tagline {
-
-      color: var(--gold-light);
-
-      font-size: 7px;
-
-      letter-spacing: 2px;
-
-      margin-top: 6px;
-
-      white-space: nowrap;
-
-    }
-
-
-    .nav-links {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 26px;
-
-    }
-
-
-    .nav-links a {
-
-      color: rgba(255,255,255,.85);
-
-      font-size: 13px;
-
-      transition: .2s;
-
-    }
-
-
-    .nav-links a:hover,
-    .nav-links .active {
-
-      color: var(--gold-light);
-
-    }
-
-
-    .business-btn {
-
-      border: 1px solid rgba(228,204,152,.65);
-
-      padding: 9px 15px;
-
-      border-radius: 50px;
-
-      color: var(--gold-light) !important;
-
-    }
-
-
-    .menu-btn {
-
-      display: none;
-
-      width: 44px;
-
-      height: 44px;
-
-      border: 1px solid rgba(255,255,255,.25);
-
-      background: rgba(255,255,255,.06);
-
-      color: white;
-
-      border-radius: 12px;
-
-      font-size: 22px;
-
-      cursor: pointer;
-
-    }
-
-
-    .mobile-menu {
-
-      display: none;
-
-      background: #061724;
-
-      padding: 12px 4%;
-
-    }
-
-
-    .mobile-menu a {
-
-      display: block;
-
-      color: white;
-
-      padding: 12px 0;
-
-      border-bottom: 1px solid rgba(255,255,255,.08);
-
-    }
-
+    header{background:var(--navy);color:white;position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.08);}
+    .navbar{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px;}
+    .logo{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+    .logo-mark{width:49px;height:49px;border:1.5px solid var(--gold);border-radius:15px 15px 15px 5px;position:relative;background:rgba(255,255,255,.04);}
+    .logo-mark::before{content:"K";position:absolute;left:9px;top:5px;font-family:"Playfair Display",serif;font-size:27px;font-weight:700;color:var(--gold-light);}
+    .logo-mark::after{content:"C";position:absolute;right:7px;bottom:3px;font-family:"Playfair Display",serif;font-size:27px;font-weight:700;color:white;}
+    .logo-title{font-size:17px;font-weight:700;letter-spacing:.7px;}
+    .logo-tagline{color:var(--gold-light);font-size:8px;letter-spacing:1.8px;margin-top:2px;}
+    .nav-links{display:flex;align-items:center;gap:4px;}
+    .nav-links a{padding:10px 13px;border-radius:10px;color:rgba(255,255,255,.78);font-size:14px;transition:.25s;}
+    .nav-links a:hover,.nav-links a.active{color:white;background:rgba(255,255,255,.08);}
+    .nav-cta{background:var(--gold)!important;color:var(--navy)!important;font-weight:700;}
+    .menu-btn{display:none;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:white;width:43px;height:43px;border-radius:11px;cursor:pointer;font-size:22px;}
 
     /* =====================================================
        HERO
@@ -1131,18 +919,10 @@
 
     @media(max-width:950px) {
 
-      .nav-links {
-
-        display: none;
-
-      }
-
-
-      .menu-btn {
-
-        display: block;
-
-      }
+      .nav-links{position:absolute;top:76px;left:0;right:0;background:var(--navy);border-top:1px solid rgba(255,255,255,.08);padding:14px 4%;display:none;flex-direction:column;align-items:stretch;}
+      .nav-links.show{display:flex;}
+      .nav-links a{padding:13px;}
+      .menu-btn{display:block;}
 
 
       .places-grid {
@@ -1402,125 +1182,30 @@
   ===================================================== -->
 
   <header>
-
     <div class="container">
-
       <nav class="navbar">
-
-
         <a href="index.html" class="logo">
-
           <div class="logo-mark"></div>
-
           <div>
-
-            <div class="logo-title">
-              KUSHINARA CONNECT
-            </div>
-
-            <div class="logo-tagline">
-              DISCOVER • CONNECT • EXPERIENCE
-            </div>
-
+            <div class="logo-title">KUSHINARA CONNECT</div>
+            <div class="logo-tagline">DISCOVER • CONNECT • EXPERIENCE</div>
           </div>
-
         </a>
-
-
-        <div class="nav-links">
-
-          <a href="index.html">
-            Home
-          </a>
-
-          <a href="places.html" class="active">
-            Places
-          </a>
-
-          <a href="hotels.html">
-            Stay
-          </a>
-
-          <a href="cabs.html">
-            Cabs
-          </a>
-
-          <a href="packages.html">
-            Packages
-          </a>
-
-          <a href="businesses.html">
-            Businesses
-          </a>
-
-          <a href="contact.html">
-            Contact
-          </a>
-
-          <a href="businesses.html" class="business-btn">
-            List Your Business
-          </a>
-
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="places.html" class="active">Places</a>
+          <a href="hotels.html">Stay</a>
+          <a href="cabs.html">Cabs</a>
+          <a href="packages.html">Packages</a>
+          <a href="restaurants.html">Food</a>
+          <a href="businesses.html">Businesses</a>
+          <a href="blog.html">Guide</a>
+          <a href="contact.html" class="nav-cta">Contact</a>
         </div>
-
-
-        <button
-          class="menu-btn"
-          id="menuBtn"
-          type="button"
-          aria-label="Open menu"
-        >
-          ☰
-        </button>
-
-
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">☰</button>
       </nav>
-
     </div>
-
-
-    <div class="mobile-menu" id="mobileMenu">
-
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="places.html">
-        Explore Places
-      </a>
-
-      <a href="hotels.html">
-        Find a Stay
-      </a>
-
-      <a href="cabs.html">
-        Book a Cab
-      </a>
-
-      <a href="packages.html">
-        Tour Packages
-      </a>
-
-      <a href="restaurants.html">
-        Restaurants
-      </a>
-
-      <a href="businesses.html">
-        Local Businesses
-      </a>
-
-      <a href="blog.html">
-        Travel Guide
-      </a>
-
-      <a href="contact.html">
-        Contact
-      </a>
-
-    </div>
-
   </header>
-
 
 
   <!-- =====================================================
@@ -2344,33 +2029,17 @@
        MOBILE MENU
     ===================================================== */
 
-    const menuBtn =
-      document.getElementById("menuBtn");
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
 
+    menuBtn.addEventListener("click", function(){
+      navLinks.classList.toggle("show");
+    });
 
-    const mobileMenu =
-      document.getElementById("mobileMenu");
-
-
-    menuBtn.addEventListener("click", function () {
-
-
-      if (mobileMenu.style.display === "block") {
-
-        mobileMenu.style.display = "none";
-
-        menuBtn.innerHTML = "☰";
-
-      }
-
-      else {
-
-        mobileMenu.style.display = "block";
-
-        menuBtn.innerHTML = "✕";
-
-      }
-
+    document.querySelectorAll(".nav-links a").forEach(function(link){
+      link.addEventListener("click", function(){
+        navLinks.classList.remove("show");
+      });
     });
 
 
