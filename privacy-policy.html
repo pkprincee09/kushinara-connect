@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Privacy Policy | KUSHINARA CONNECT</title>
+  <meta name="description" content="Privacy Policy for KUSHINARA CONNECT explaining how information, cookies, advertising and third-party services may be handled.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --navy:#0b1d2a;
+      --navy2:#102b3d;
+      --gold:#c9a45c;
+      --gold-light:#e0c486;
+      --cream:#f7f2e8;
+      --white:#ffffff;
+      --text:#24313a;
+      --muted:#66727b;
+      --border:#e7dfd0;
+      --shadow:0 18px 50px rgba(11,29,42,.10);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:"DM Sans",sans-serif;
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.75;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:min(1120px,92%);
+      margin:auto;
+    }
+
+    /* NAVBAR */
+
+    header{
+      background:var(--navy);
+      color:#fff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      border-bottom:1px solid rgba(201,164,92,.25);
+    }
+
+    .nav{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      line-height:1.1;
+    }
+
+    .brand strong{
+      font-family:"Playfair Display",serif;
+      font-size:22px;
+      letter-spacing:1.5px;
+      color:#fff;
+    }
+
+    .brand span{
+      font-size:9px;
+      letter-spacing:2.8px;
+      color:var(--gold-light);
+      margin-top:5px;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-size:14px;
+    }
+
+    .nav-links a{
+      color:#e8edf0;
+      transition:.25s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active{
+      color:var(--gold-light);
+    }
+
+    .menu-btn{
+      display:none;
+      border:1px solid rgba(255,255,255,.2);
+      background:transparent;
+      color:white;
+      font-size:24px;
+      padding:5px 10px;
+      border-radius:8px;
+      cursor:pointer;
+    }
+
+    /* HERO */
+
+    .hero{
+      background:linear-gradient(135deg,rgba(11,29,42,.98),rgba(16,43,61,.96));
+      color:white;
+      padding:85px 0;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero:before{
+      content:"";
+      position:absolute;
+      width:350px;
+      height:350px;
+      border:1px solid rgba(201,164,92,.18);
+      border-radius:50%;
+      top:-190px;
+      right:-100px;
+    }
+
+    .hero:after{
+      content:"";
+      position:absolute;
+      width:280px;
+      height:280px;
+      border:1px solid rgba(201,164,92,.12);
+      border-radius:50%;
+      bottom:-180px;
+      left:-90px;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:800px;
+      margin:auto;
+    }
+
+    .eyebrow{
+      color:var(--gold-light);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:3px;
+      margin-bottom:15px;
+    }
+
+    .hero h1{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(38px,6vw,62px);
+      line-height:1.1;
+      margin-bottom:18px;
+    }
+
+    .hero p{
+      color:#dbe3e8;
+      font-size:16px;
+      max-width:680px;
+      margin:auto;
+    }
+
+    /* CONTENT */
+
+    .section{
+      padding:75px 0;
+    }
+
+    .policy-wrap{
+      max-width:900px;
+      margin:auto;
+    }
+
+    .last-updated{
+      display:inline-block;
+      background:#fff;
+      border:1px solid var(--border);
+      padding:9px 15px;
+      border-radius:30px;
+      color:var(--muted);
+      font-size:13px;
+      margin-bottom:30px;
+    }
+
+    .policy-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:45px;
+      box-shadow:var(--shadow);
+    }
+
+    .policy-card h2{
+      font-family:"Playfair Display",serif;
+      color:var(--navy);
+      font-size:28px;
+      margin:32px 0 12px;
+    }
+
+    .policy-card h2:first-child{
+      margin-top:0;
+    }
+
+    .policy-card h3{
+      color:var(--navy);
+      font-size:18px;
+      margin:22px 0 8px;
+    }
+
+    .policy-card p{
+      color:#56636c;
+      margin-bottom:14px;
+    }
+
+    .policy-card ul{
+      padding-left:22px;
+      color:#56636c;
+      margin-bottom:15px;
+    }
+
+    .policy-card li{
+      margin-bottom:8px;
+    }
+
+    .highlight{
+      background:var(--cream);
+      border-left:4px solid var(--gold);
+      padding:18px 20px;
+      border-radius:8px;
+      margin:20px 0;
+    }
+
+    .contact-box{
+      background:var(--navy);
+      color:#fff;
+      border-radius:18px;
+      padding:28px;
+      margin-top:30px;
+    }
+
+    .contact-box h3{
+      color:#fff;
+      font-family:"Playfair Display",serif;
+      font-size:23px;
+      margin-bottom:10px;
+    }
+
+    .contact-box p{
+      color:#ccd7dc;
+      margin:5px 0;
+    }
+
+    .contact-box a{
+      color:var(--gold-light);
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#07151f;
+      color:#dce4e8;
+      padding:55px 0 22px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.5fr 1fr 1fr 1fr;
+      gap:35px;
+      padding-bottom:35px;
+    }
+
+    .footer-brand strong{
+      display:block;
+      font-family:"Playfair Display",serif;
+      color:#fff;
+      font-size:23px;
+      letter-spacing:1px;
+      margin-bottom:6px;
+    }
+
+    .footer-brand span{
+      color:var(--gold-light);
+      font-size:9px;
+      letter-spacing:2.5px;
+    }
+
+    .footer-brand p{
+      color:#9eabb2;
+      font-size:13px;
+      margin-top:17px;
+      max-width:300px;
+    }
+
+    footer h4{
+      color:#fff;
+      font-size:14px;
+      margin-bottom:15px;
+    }
+
+    footer ul{
+      list-style:none;
+    }
+
+    footer li{
+      margin-bottom:8px;
+    }
+
+    footer a{
+      color:#9eabb2;
+      font-size:13px;
+      transition:.2s;
+    }
+
+    footer a:hover{
+      color:var(--gold-light);
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:20px;
+      display:flex;
+      justify-content:space-between;
+      gap:15px;
+      color:#7e8b92;
+      font-size:12px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+      .nav-links{
+        display:none;
+        position:absolute;
+        top:78px;
+        left:0;
+        right:0;
+        background:var(--navy);
+        flex-direction:column;
+        align-items:flex-start;
+        padding:22px 5%;
+        border-top:1px solid rgba(255,255,255,.08);
+      }
+
+      .nav-links.show{
+        display:flex;
+      }
+
+      .menu-btn{
+        display:block;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:600px){
+
+      .nav{
+        min-height:70px;
+      }
+
+      .nav-links{
+        top:70px;
+      }
+
+      .brand strong{
+        font-size:18px;
+      }
+
+      .brand span{
+        font-size:7px;
+      }
+
+      .hero{
+        padding:65px 0;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .section{
+        padding:55px 0;
+      }
+
+      .policy-card{
+        padding:26px 21px;
+        border-radius:17px;
+      }
+
+      .policy-card h2{
+        font-size:25px;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="container nav">
+
+      <a href="index.html" class="brand">
+        <strong>KUSHINARA CONNECT</strong>
+        <span>DISCOVER • CONNECT • EXPERIENCE</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="places.html">Places</a>
+        <a href="hotels.html">Stay</a>
+        <a href="cabs.html">Cabs</a>
+        <a href="packages.html">Packages</a>
+        <a href="restaurants.html">Food</a>
+        <a href="businesses.html">Businesses</a>
+        <a href="blog.html">Guide</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-content">
+
+      <div class="eyebrow">
+        KUSHINARA CONNECT
+      </div>
+
+      <h1>Privacy Policy</h1>
+
+      <p>
+        Your privacy matters to us. This page explains how information
+        may be collected, used and protected when you use our website.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- POLICY -->
+
+  <section class="section">
+
+    <div class="container policy-wrap">
+
+      <div class="last-updated">
+        Last Updated: September 2026
+      </div>
+
+      <div class="policy-card">
+
+        <h2>1. Introduction</h2>
+
+        <p>
+          Welcome to KUSHINARA CONNECT. We respect your privacy and are
+          committed to being transparent about how information may be
+          handled when you visit or use our website.
+        </p>
+
+        <p>
+          This Privacy Policy explains the general practices of
+          KUSHINARA CONNECT regarding information, cookies, advertising,
+          communication and third-party services.
+        </p>
+
+
+        <h2>2. Information We May Collect</h2>
+
+        <p>
+          Depending on how you interact with our website, we may receive
+          information that you voluntarily provide.
+        </p>
+
+        <ul>
+          <li>Name or other details submitted through an enquiry form.</li>
+          <li>Email address when you contact us by email.</li>
+          <li>Phone or WhatsApp number when you contact us directly.</li>
+          <li>Information submitted by businesses for listing or enquiries.</li>
+        </ul>
+
+        <p>
+          We only intend to use information for legitimate purposes
+          connected with providing, improving or communicating about
+          our website and services.
+        </p>
+
+
+        <h2>3. How We Use Information</h2>
+
+        <p>
+          Information may be used to:
+        </p>
+
+        <ul>
+          <li>Respond to enquiries and messages.</li>
+          <li>Provide requested information or assistance.</li>
+          <li>Improve the website and user experience.</li>
+          <li>Manage business or service enquiries.</li>
+          <li>Maintain website security and functionality.</li>
+        </ul>
+
+
+        <h2>4. Cookies</h2>
+
+        <p>
+          KUSHINARA CONNECT may use cookies or similar technologies to
+          improve website functionality, understand website usage and
+          support relevant services.
+        </p>
+
+        <p>
+          Cookies are small files that may be stored on your device when
+          you visit a website. You can manage or disable cookies through
+          your browser settings, although some website features may not
+          function as intended.
+        </p>
+
+
+        <h2>5. Google Advertising</h2>
+
+        <p>
+          We may use Google and other third-party advertising services
+          on KUSHINARA CONNECT.
+        </p>
+
+        <p>
+          These services may use cookies or similar technologies to
+          display advertisements based on a user's visit to this website
+          or other websites.
+        </p>
+
+        <div class="highlight">
+          If Google AdSense or another advertising service is enabled on
+          this website, advertisements may be personalized or
+          non-personalized depending on applicable settings, user choices
+          and regional requirements.
+        </div>
+
+        <p>
+          Users may have options to manage advertising personalization
+          through Google's available advertising settings and controls.
+        </p>
+
+
+        <h2>6. Third-Party Services</h2>
+
+        <p>
+          Our website may contain links, services or integrations provided
+          by third parties, including hotels, restaurants, transport
+          providers, businesses, maps, messaging services, analytics
+          providers or advertising platforms.
+        </p>
+
+        <p>
+          Third-party websites and services have their own privacy
+          policies and terms. KUSHINARA CONNECT is not responsible for
+          the privacy practices of external websites that you may access
+          through links on our website.
+        </p>
+
+
+        <h2>7. WhatsApp & Email Communication</h2>
+
+        <p>
+          If you choose to contact KUSHINARA CONNECT through WhatsApp,
+          email or another communication method, the information you
+          provide may be used to respond to your enquiry.
+        </p>
+
+        <p>
+          WhatsApp and email are third-party communication services and
+          may have their own privacy policies and terms.
+        </p>
+
+
+        <h2>8. Business Listings</h2>
+
+        <p>
+          Businesses may provide information for listing, promotion or
+          communication purposes.
+        </p>
+
+        <p>
+          Business owners are responsible for ensuring that information
+          submitted by them is accurate and that they have the necessary
+          rights or permission to provide such information.
+        </p>
+
+
+        <h2>9. Data Security</h2>
+
+        <p>
+          We take reasonable steps to protect information against
+          unauthorized access, misuse or disclosure. However, no method
+          of transmitting information over the internet or storing
+          information electronically can be guaranteed to be completely
+          secure.
+        </p>
+
+
+        <h2>10. Children's Privacy</h2>
+
+        <p>
+          KUSHINARA CONNECT is intended for general audiences and is not
+          specifically directed toward children under the applicable age
+          of digital consent in their jurisdiction.
+        </p>
+
+        <p>
+          We do not knowingly request unnecessary personal information
+          from children.
+        </p>
+
+
+        <h2>11. External Links</h2>
+
+        <p>
+          Our website may provide links to external websites for
+          convenience, such as local businesses, travel resources or
+          third-party services.
+        </p>
+
+        <p>
+          Once you leave KUSHINARA CONNECT, the external website's own
+          policies apply.
+        </p>
+
+
+        <h2>12. Changes to This Privacy Policy</h2>
+
+        <p>
+          We may update this Privacy Policy from time to time to reflect
+          changes to our website, services, legal requirements or
+          advertising practices.
+        </p>
+
+        <p>
+          Any updated version will be published on this page with a
+          revised "Last Updated" date.
+        </p>
+
+
+        <h2>13. Contact Us</h2>
+
+        <p>
+          If you have questions about this Privacy Policy or how
+          information is handled on KUSHINARA CONNECT, you can contact us.
+        </p>
+
+        <div class="contact-box">
+
+          <h3>Team Kushinara Connect</h3>
+
+          <p>
+            📞 <a href="tel:+916394585927">6394585927</a>
+          </p>
+
+          <p>
+            ✉️ <a href="mailto:pkprincebus8888@gmail.com">
+              pkprincebus8888@gmail.com
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <a href="index.html">
+            <strong>KUSHINARA CONNECT</strong>
+            <span>DISCOVER • CONNECT • EXPERIENCE</span>
+          </a>
+
+          <p>
+            A local tourism and discovery platform designed to help
+            travellers explore Kushinagar and connect with local services.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>Explore</h4>
+
+          <ul>
+            <li><a href="places.html">Places</a></li>
+            <li><a href="hotels.html">Stay</a></li>
+            <li><a href="cabs.html">Cabs</a></li>
+            <li><a href="packages.html">Packages</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Discover</h4>
+
+          <ul>
+            <li><a href="restaurants.html">Food</a></li>
+            <li><a href="businesses.html">Businesses</a></li>
+            <li><a href="blog.html">Travel Guide</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>For Businesses</h4>
+
+          <ul>
+            <li><a href="businesses.html">List Your Business</a></li>
+            <li><a href="contact.html">Partner With Us</a></li>
+            <li><a href="contact.html">Advertise</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 KUSHINARA CONNECT. All rights reserved.
+        </span>
+
+        <span>
+          Discover • Connect • Experience
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+      });
+    });
+
+  </script>
+
+</body>
+</html>
