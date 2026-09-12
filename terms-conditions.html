@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Terms & Conditions | Kushinara Connect</title>
+  <meta name="description" content="Read the Terms & Conditions for using Kushinara Connect, a local tourism and business discovery platform for Kushinagar.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: #f7f3ea;
+      color: #182235;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .navbar {
+      background: #101c32;
+      color: #fff;
+      padding: 16px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,.15);
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #d7ad58;
+    }
+
+    .tagline {
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #f4ead6;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: #d7ad58;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      background:
+        linear-gradient(rgba(16,28,50,.94), rgba(16,28,50,.94));
+      color: white;
+      text-align: center;
+      padding: 90px 20px 80px;
+    }
+
+    .hero small {
+      color: #d7ad58;
+      letter-spacing: 3px;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 6vw, 65px);
+      margin: 15px 0;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: #e7e7e7;
+      font-size: 17px;
+    }
+
+    /* ================= CONTENT ================= */
+
+    .container {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .updated {
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+
+    .content-card {
+      background: #fff;
+      padding: 42px;
+      margin-bottom: 25px;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(16,28,50,.07);
+      border: 1px solid rgba(215,173,88,.15);
+    }
+
+    .content-card h2 {
+      font-family: "Playfair Display", serif;
+      color: #101c32;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .content-card p {
+      color: #4e5663;
+      margin-bottom: 14px;
+    }
+
+    .content-card ul {
+      padding-left: 22px;
+      color: #4e5663;
+    }
+
+    .content-card li {
+      margin-bottom: 9px;
+    }
+
+    .highlight {
+      color: #9a762c;
+      font-weight: 600;
+    }
+
+    /* ================= CTA ================= */
+
+    .cta {
+      background: #101c32;
+      color: white;
+      text-align: center;
+      padding: 65px 20px;
+      margin-top: 70px;
+    }
+
+    .cta h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: #dfe3ea;
+      max-width: 650px;
+      margin: 0 auto 25px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #d7ad58;
+      color: #101c32;
+      padding: 13px 25px;
+      border-radius: 30px;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .cta-btn:hover {
+      background: #f0ce7e;
+      transform: translateY(-2px);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #0b1425;
+      color: #cbd1da;
+      padding: 50px 6% 25px;
+    }
+
+    .footer-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-brand h3 {
+      font-family: "Playfair Display", serif;
+      color: #d7ad58;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+      max-width: 420px;
+      font-size: 14px;
+      color: #aeb6c2;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #aeb6c2;
+      font-size: 14px;
+      margin-bottom: 8px;
+      transition: .3s;
+    }
+
+    .footer-col a:hover {
+      color: #d7ad58;
+    }
+
+    .copyright {
+      max-width: 1150px;
+      margin: 35px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      text-align: center;
+      font-size: 13px;
+      color: #8993a2;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #101c32;
+        flex-direction: column;
+        padding: 22px;
+        gap: 18px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero {
+        padding: 70px 20px 60px;
+      }
+
+      .content-card {
+        padding: 28px 22px;
+      }
+
+      .content-card h2 {
+        font-size: 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav class="navbar">
+
+    <div>
+      <a href="index.html">
+        <div class="logo">KUSHINARA CONNECT</div>
+        <div class="tagline">DISCOVER • CONNECT • EXPERIENCE</div>
+      </a>
+    </div>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="places.html">Places</a>
+      <a href="hotels.html">Stay</a>
+      <a href="cabs.html">Cabs</a>
+      <a href="packages.html">Packages</a>
+      <a href="restaurants.html">Food</a>
+      <a href="businesses.html">Businesses</a>
+      <a href="guide.html">Guide</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <small>LEGAL INFORMATION</small>
+
+    <h1>Terms & Conditions</h1>
+
+    <p>
+      Please read these terms carefully before using
+      Kushinara Connect and its services.
+    </p>
+
+  </section>
+
+
+  <!-- ================= CONTENT ================= -->
+
+  <main class="container">
+
+    <div class="updated">
+      Last Updated: September 2026
+    </div>
+
+
+    <section class="content-card">
+
+      <h2>1. Introduction</h2>
+
+      <p>
+        Welcome to <span class="highlight">Kushinara Connect</span>.
+        These Terms & Conditions explain the rules and conditions
+        for using our website and the information and services
+        available through it.
+      </p>
+
+      <p>
+        By accessing or using this website, you agree to follow
+        these Terms & Conditions. If you do not agree with any
+        part of these terms, please do not use the website.
+      </p>
+
+    </section>
+
+
+    <section class="content-card">
+
+      <h2>2. About Kushinara Connect</h2>
+
+      <p>
+        Kushinara Connect is a local tourism and business discovery
+        platform focused on Kushinagar and surrounding areas.
+      </p>
+
+      <p>
+        The website may provide information about tourist places,
+        hotels, restaurants, transportation, tour packages,
+        local businesses and other useful travel resources.
+      </p>
+
+    </section>
+
+
+    <section class="content-card">
+
+      <h2>3. Website Information</h2>
+
+      <p>
+        We try to keep the information published on Kushinara Connect
+        useful, accurate and up to date. However, information may
+        change over time.
+      </p>
+
+      <p>
+        We do not guarantee that every price, opening hour,
+        availability, contact detail, business listing or other
+        information will always be completely accurate or current.
+      </p>
+
+      <p>
+        Users should verify important information directly with the
+        relevant hotel, restaurant, transport provider, attraction
+        or business before making decisions.
+      </p>
+
+    </section>
+
+
+    <section class="content-card">
+
+      <h2>4. Tourism & Travel Information</h2>
+
+      <p>
+        Travel guides, destination information and recommendations
+        provided on this website are for general informational
+        purposes.
+      </p>
+
+      <p>
+        Users are responsible for making their own travel arrangements
+        and decisions based on their individual requirements.
+      </p>
+
+      <p>
+        Kushinara Connect does not guarantee any particular travel
+        experience, availability, pricing or service quality of
+        third-party providers.
+      </p>
+
+    </section>
+
+
+    <section class="content-card">
+
+      <h2>5. Hotels, Restaurants & Local Businesses</h2>
+
+      <p>
+        Kushinara Connect may display information about third-party
+        hotels, restaurants, shops, travel services and other local
+        businesses.
+      </p>
+
+      <p>
+        These businesses are independent service providers. Their
+        products, services, prices, availability and policies are
+        controlled by the respective businesses.
+      </p>
+
+      <p>
+        Any transaction or agreement between a user and a third-party
+        business is primarily between those parties.
+      </p>
+
+    </section>
+
+
+    <section class="content-card">
+
+      <h2>6. Bookings & Enquiries</h2>
+
+      <p>
+        Some parts of the website may provide contact options,
+        enquiry forms, WhatsApp links or other ways to connect
+        users with service providers.
+      </p>
+
+      <p>
+        Unless clearly stated otherwise, submitting an enquiry or
+        contacting a business does not automatically mean that a
+        booking or reservation has been confirmed.
+      </p>
+
+      <p>
+        Users should confirm the final price, availability,
+        cancellation policy and other booking details directly
+        with the relevant service provider.
+      </p>
+
+    </section>
+
+
+    <section class="content-card">
+
+      <h2>7. User Responsibilities</h2>
+
+      <p>
+        When using Kushinara Connect, you agree to use the website
+        responsibly and lawfully.
+      </p>
+
+      <ul>
+        <li>Do not use the website for unlawful activities.</li>
+        <li>Do not submit false or misleading information.</li>
+        <li>Do not attempt to damage or disrupt the website.</li>
+        <li>Do not attempt unauthorized access to website systems.</li>
+        <li>Do not misuse contact forms, WhatsApp links or other communication features.</li>
+        <li>Do not copy or misuse website content for misleading purposes.</li>
+      </ul>
+
+    </section>
+
+
+    <section class="content-card">
+
+      <h2>8. Business Listings</h2>
+
+      <p>
+        Local businesses may have the opportunity to submit or
+        request business information for listing on Kushinara Connect.
+      </p>
+
+      <p>
+        Businesses are responsible for ensuring that the information
+        they provide is accurate, lawful and not misleading.
+      </p>
+
+      <p>
+        Kushinara Connect may review, update, modify, reject or remove
+        a listing when necessary.
+      </p>
+
+    </section>
+
+
+    <section class="content-card">
+
+      <h2>9. Intellectual Property</h2>
+
+      <p>
+        Unless otherwise stated, the design, branding, text,
+        graphics, layout and original content of Kushinara Connect
+        are protected by applicable intellectual property rights.
+      </p>
+
+      <p>
+        You may view and use the website for personal and lawful
+        purposes, but you should not reproduce, redistribute,
+        modify or commercially exploit original website content
+        without appropriate permission.
+      </p>
+
+    </section>
+
+
+    <section class="content-card">
+
+      <h2>10. Third-Party Links & Services</h2>
+
+      <p>
+        Our website may contain links to external websites,
+        applications, social media platforms or third-party services.
+      </p>
+
+      <p>
+        These external services are operated independently from
+        Kushinara Connect. We are not responsible for their content,
+        availability, privacy practices or policies.
+      </p>
+
+      <p>
+        Users should review the terms and privacy policies of
+        external websites before using their services.
+      </p>
+
+    </section>
+
+
+    <section class="content-card">
+
+      <h2>11. Website Availability</h2>
+
+      <p>
+        We aim to keep Kushinara Connect available and functional,
+        but we cannot guarantee uninterrupted access at all times.
+      </p>
+
+      <p>
+        The website may occasionally be unavailable because of
+        maintenance, technical problems, hosting issues,
+        updates or circumstances outside our control.
+      </p>
+
+    </section>
+
+
+    <section class="content-card">
+
+      <h2>12. Limitation of Responsibility</h2>
+
+      <p>
+        Kushinara Connect is primarily an information and discovery
+        platform. We are not responsible for losses, disputes,
+        cancellations, delays, service issues or other problems
+        arising from transactions or services provided by
+        independent third parties.
+      </p>
+
+      <p>
+        Users should exercise reasonable care and verify important
+        details before making travel, accommodation, transportation
+        or purchasing decisions.
+      </p>
+
+    </section>
+
+
+    <section class="content-card">
+
+      <h2>13. Changes to These Terms</h2>
+
+      <p>
+        We may update these Terms & Conditions from time to time
+        to reflect changes to our website, services or practices.
+      </p>
+
+      <p>
+        Updated terms will be published on this page with a revised
+        “Last Updated” date.
+      </p>
+
+    </section>
+
+
+    <section class="content-card">
+
+      <h2>14. Privacy</h2>
+
+      <p>
+        Your use of this website is also subject to our
+        <a href="privacy-policy.html" class="highlight">
+          Privacy Policy
+        </a>.
+      </p>
+
+      <p>
+        The Privacy Policy explains how information may be collected,
+        used and handled when you use Kushinara Connect.
+      </p>
+
+    </section>
+
+
+    <section class="content-card">
+
+      <h2>15. Contact Us</h2>
+
+      <p>
+        If you have questions about these Terms & Conditions,
+        you can contact Team Kushinara Connect.
+      </p>
+
+      <p>
+        <strong>Phone:</strong>
+        <a href="tel:6394585927" class="highlight">
+          +91 6394585927
+        </a>
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:pkprincebus8888@gmail.com" class="highlight">
+          pkprincebus8888@gmail.com
+        </a>
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= CTA ================= -->
+
+  <section class="cta">
+
+    <h2>Have a Question?</h2>
+
+    <p>
+      If you need help understanding our website, services or
+      these Terms & Conditions, feel free to contact us.
+    </p>
+
+    <a href="contact.html" class="cta-btn">
+      Contact Kushinara Connect
+    </a>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <h3>Kushinara Connect</h3>
+
+        <p>
+          Discover places, connect with local businesses and
+          experience Kushinagar with ease.
+        </p>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>Explore</h4>
+
+        <a href="index.html">Home</a>
+        <a href="places.html">Places</a>
+        <a href="hotels.html">Stay</a>
+        <a href="cabs.html">Cabs</a>
+        <a href="packages.html">Packages</a>
+        <a href="restaurants.html">Food</a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>Information</h4>
+
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-conditions.html">Terms & Conditions</a>
+        <a href="disclaimer.html">Disclaimer</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+      © 2026 Kushinara Connect. All rights reserved.
+    </div>
+
+  </footer>
+
+
+  <!-- ================= SCRIPT ================= -->
+
+  <script>
+
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        document.getElementById("navLinks").classList.remove("active");
+      });
+    });
+
+  </script>
+
+</body>
+</html>
