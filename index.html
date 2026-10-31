@@ -348,13 +348,34 @@ header{
   padding:13px;
   box-shadow:var(--shadow);
 
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:8px;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  max-height:430px;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  scrollbar-color:var(--gold) rgba(7,26,43,.08);
+}
+
+.quick-actions::-webkit-scrollbar{
+  width:5px;
+}
+
+.quick-actions::-webkit-scrollbar-track{
+  background:rgba(7,26,43,.06);
+  border-radius:10px;
+}
+
+.quick-actions::-webkit-scrollbar-thumb{
+  background:var(--gold);
+  border-radius:10px;
 }
 
 .quick-action{
-  padding:18px 15px;
+  flex:0 0 auto;
+  min-height:70px;
+  padding:12px 15px;
   border-radius:13px;
   display:flex;
   align-items:center;
@@ -727,10 +748,6 @@ footer{
     display:block;
   }
 
-  .quick-actions{
-    grid-template-columns:repeat(2,1fr);
-  }
-
   .service-grid{
     grid-template-columns:repeat(2,1fr);
   }
@@ -786,10 +803,6 @@ footer{
 
   .hero p{
     font-size:15px;
-  }
-
-  .quick-actions{
-    grid-template-columns:1fr 1fr;
   }
 
   .quick-action{
@@ -854,7 +867,13 @@ footer{
 @media(max-width:430px){
 
   .quick-actions{
-    grid-template-columns:1fr;
+    max-height:390px;
+    padding:10px;
+  }
+
+  .quick-action{
+    min-height:64px;
+    padding:10px 12px;
   }
 
   .quick-action span{
@@ -865,6 +884,73 @@ footer{
     grid-template-columns:1fr;
   }
 
+}
+
+
+/* ================= SCROLLABLE QUICK ACTIONS ================= */
+.quick-actions{
+  display:flex !important;
+  flex-direction:column;
+  gap:10px;
+  max-height:520px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  padding:18px 14px 18px 18px;
+  scrollbar-width:thin;
+  scrollbar-color:var(--gold) rgba(7,26,43,.08);
+  overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
+}
+.quick-actions::-webkit-scrollbar{
+  width:7px;
+}
+.quick-actions::-webkit-scrollbar-track{
+  background:rgba(7,26,43,.07);
+  border-radius:20px;
+}
+.quick-actions::-webkit-scrollbar-thumb{
+  background:var(--gold);
+  border-radius:20px;
+  border:1px solid white;
+}
+.quick-action{
+  flex:0 0 auto;
+  min-height:104px;
+  padding:14px 20px;
+  border-radius:15px;
+}
+.quick-icon{
+  width:66px;
+  height:66px;
+  min-width:66px;
+  border-radius:17px;
+  font-size:26px;
+}
+.quick-action strong{
+  font-size:19px;
+}
+.quick-action span{
+  font-size:14px;
+  margin-top:4px;
+}
+@media(max-width:700px){
+  .quick-actions{
+    max-height:520px;
+    padding:14px 10px 14px 14px;
+  }
+  .quick-action{
+    min-height:104px;
+    padding:16px 14px;
+  }
+  .quick-action strong{font-size:19px;}
+  .quick-action span{display:block;font-size:15px;}
+  .quick-icon{
+    width:78px;height:78px;min-width:78px;
+  }
+}
+@media(max-width:430px){
+  .quick-actions{display:flex !important;flex-direction:column;}
+  .quick-action span{display:block;}
 }
 
 </style>
@@ -1023,6 +1109,34 @@ View Tour Packages
 <div>
 <strong>Find a Stay</strong>
 <span>Hotels & stays</span>
+</div>
+
+</a>
+
+
+<a href="restaurants.html" class="quick-action">
+
+<div class="quick-icon">
+🍽️
+</div>
+
+<div>
+<strong>Food & Restaurants</strong>
+<span>Discover local food</span>
+</div>
+
+</a>
+
+
+<a href="businesses.html" class="quick-action">
+
+<div class="quick-icon">
+🏪
+</div>
+
+<div>
+<strong>Local Businesses</strong>
+<span>Explore shops & services</span>
 </div>
 
 </a>
